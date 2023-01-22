@@ -1,0 +1,51 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+
+website:
+  title: SID's
+  page-navigation: true
+  navbar:
+    right:
+      - text: Notes
+        file: notes/holder.qmd
+      - text: Econ
+        file: econ/index.qmd
+  
+  sidebar:
+    - id: notes
+      title: Notes
+      collapse-level: 1
+      contents:
+        - notes/holder.qmd
+        - section: 宏观经济学二十五讲
+          contents:
+            - notes/macro-25/ch00.qmd
+            - notes/macro-25/ch01.qmd
+            - notes/macro-25/ch02_1.qmd
+            - notes/macro-25/ch02_2.qmd
+            - notes/macro-25/ch02-03.qmd
+            - notes/macro-25/ch05-06.qmd
+            - notes/macro-25/ch07-08.qmd
+    
+    - id: econ
+      title: Econ
+      contents:
+        - econ/index.qmd
+        - econ/2022/01.qmd
+
+
+format:
+  html:
+    smooth-scroll: true
+    theme: flatly
+    # max-width: 1920px
+    toc: true
+    css: style.css
+    code-copy: true
+    code-overflow: wrap
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px

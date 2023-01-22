@@ -1,0 +1,18 @@
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+.python-version
+*.pyc
+.ipynb_checkpoints/
+__pycache__/
+
+# Quarto
+_site/
+site/
+_build/
+.quarto/
+
+# Others

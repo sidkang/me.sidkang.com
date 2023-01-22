@@ -1,0 +1,38 @@
+---
+toc: true
+---
+
+Blank Page.
+
+## this is a thing
+
+```{python}
+import pandas as pd
+print("123")
+
+a = 2 + 3
+```
+
+```{python}
+from IPython.display import Markdown
+
+print(a)
+```
+
+```{python}
+#| output: asis
+
+Markdown("""**some python**
+
+# This is a big difference
+
+*some markdown* $\phi$""")
+```
+
+```{python}
+#| echo: false
+#| output: asis
+
+print("# Heading 1\n")
+print("## Heading 2\n")
+```

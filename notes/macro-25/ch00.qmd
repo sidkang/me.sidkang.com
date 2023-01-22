@@ -1,0 +1,36 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.13.8
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
+
+# 宏观经济学二十五讲
+
+![Economics](assets/bookcover.jpeg)
+
+**宏观经济学二十五讲（中级宏观经济学）**
+
+## 相关视频
+
+1. [徐高课程无数学版](https://www.bilibili.com/video/BV1oE411Z7TU?from=search&seid=16578622647655450754&spm_id_from=333.337.0.0)
+
+   这是徐高老师官方发布的在线课程
+2. 徐高课程带数学4学分版
+
+   目前网上似乎没看到这个资源，之前机缘巧合从犄角旮旯买到了一份是北大课程的实录，如有需要，请联系我
+3. [某同学总结](https://www.bilibili.com/video/BV1b34y1B7xi?p=2&spm_id_from=pageDriver)
+4. [课后习题答案](https://www.bilibili.com/video/BV1PN411o7jW?from=search&seid=12809617495930353947&spm_id_from=333.337.0.0) 暂时未确认准确性
+5. [某同学模型还原](https://www.bilibili.com/video/BV1DV41167ye?from=search&seid=16578622647655450754&spm_id_from=333.337.0.0) 暂时未确认准确性
+6. [某同学梳理](https://www.bilibili.com/video/BV1qP4y1P7y4?from=search&seid=9805658391690505544&spm_id_from=333.337.0.0) 暂时未确认准确性
+
+## 其它需要进一步学习的部分(todo)
+
