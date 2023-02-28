@@ -1,0 +1,16 @@
+---
+title: Quarto Reference
+# sidebar: false
+---
+
+## Layout
+
+- [Article Layout](https://quarto.org/docs/authoring/article-layout.html)
+- [Execution Options](https://quarto.org/docs/computations/execution-options.html)
+- [Page Layout](https://quarto.org/docs/output-formats/page-layout.html)
+- [Bootstrap CSS Grid](https://getbootstrap.com/docs/5.1/layout/css-grid/)
+- [HTML Options](https://quarto.org/docs/reference/formats/html.html)
+
+## BootStrap
+
+- [Typography](https://getbootstrap.com/docs/5.2/content/typography/)

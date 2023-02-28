@@ -1,16 +1,5 @@
 ---
-jupytext:
-  cell_metadata_filter: -all
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.13.8
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
+title: 从内部失衡到外部失衡
 ---
 
 # 从内部失衡到外部失衡
@@ -33,29 +22,30 @@ $$
 \end{array}
 $$
 
-```{hint}
+::: {.callout-caution}
 **经常账的账户种解读方式**
-- $ \text{CA} = \text{Y} - (\text{C} + \text{I}) = \text{产出} - \text{消费}$
+
+- $\text{CA} = \text{Y} - (\text{C} + \text{I}) = \text{产出} - \text{消费}$
 - $\text{CA} = \text{S} - \text{I} = \text{储蓄} - \text{投资}$
-```
+
+:::
 
 ## 全球失衡和过剩储蓄
 
-```{caution}
+::: {.callout-note}
 补充图表
-```
+:::
 
 
 
 
 ## 全球失衡的模型分析
 
-```{code-cell} python
-:tags: [remove-input]
-:align: center
+``` {python}
+#| echo: false
+#| output: asis
 from plantuml import PlantUML
-from IPython.display import Image
-from myst_nb import glue
+from IPython.display import Image, Markdown
 
 uml = """
 @startuml
@@ -111,7 +101,6 @@ firm -> con: <latex>w_2^*L,(1+r_2)k_{c1}</latex>
 """
 
 puml = PlantUML('http://www.plantuml.com/plantuml/png/')
-glue('ramsy-model-consumer-soe-foreign', Image(url=puml.get_url(uml)), display=False)
 ```
 
 ### 模型设定
@@ -125,18 +114,18 @@ glue('ramsy-model-consumer-soe-foreign', Image(url=puml.get_url(uml)), display=F
 
 ### 模型构建
 
-`````{tab-set}
-````{tab-item} 时序图
-```{glue:figure} ramsy-model-consumer-soe-foreign
-时序图
+::: {.panel-tabset}
+
+## 时序图
+
+``` {python}
+#| echo: false
+#| output: asis
+Markdown(f'![]({puml.get_url(uml)}){{width=100% fig-align="center"}}')
 ```
-````
 
 
-
-
-
-````{tab-item} 本国居民
+## 本国居民
 
 居民的最优化效用函数仍然为
 
@@ -156,7 +145,10 @@ $$
 设定拉格朗日函数
 
 $$
-\mathcal{L} = u(c_1) + \beta u(c_2) + \lambda_1[(1 + r_1)k_{c0} + w_1L + b_{c1} - c_1 - k_{c1}] + \lambda_2[(1 + r_2)k_{c1} + w_2L - (1 + r_{g2})b_{c1} - c_2]
+\begin{alignat}{1}
+\mathcal{L} =& u(c_1) + \beta u(c_2) + \lambda_1[(1 + r_1)k_{c0} + w_1L + b_{c1} - c_1 - k_{c1}] \\
+              &+ \lambda_2[(1 + r_2)k_{c1} + w_2L - (1 + r_{g2})b_{c1} - c_2]
+\end{alignat}
 $$
 
 一阶优化条件为
@@ -181,12 +173,12 @@ $$
 
 由以上可知， $r_2 = r_{g2}$
 
-```{hint}
-$r_2 = r_{g2}$ 无论居民是通过借出资金、或是接入资金作为投资，只有在两种方式的收益率想等时，居民消费储蓄才能达到最佳效用，否则，居民可以通过向收益率高的风向转移资源配置以获取更高的收益率，而随着收益更高的方向资源变多，其边际收益率会不断降低，直至两者收益率相等
-```
-````
+::: {.callout-tip}
+由$r_2 = r_{g2}$可知，无论居民是通过借出资金、或是接入资金作为投资，[只有在两种方式的收益率想等时，居民消费储蓄才能达到最佳效用]{.text-primary}，否则，居民可以通过向收益率高的风向转移资源配置以获取更高的收益率，而随着收益更高的方向资源变多，其边际收益率会不断降低，直至两者收益率相等
+:::
 
-````{tab-item} 本国企业
+## 本国企业
+
 模型中，本国企业仍为国企，居民无控制权，所以企业仍然以企业资本存量最大化为目标，即
 
 $$
@@ -222,12 +214,11 @@ $$
 
 通过消去拉格朗日乘子，可得 $AF_1(k_{f1} + k_1^d, l_2^d) = r_{g2} = r_2 $
 
-```{hint}
+::: {.callout-tip}
 与本国居民的理由一致，只有当企业的边际资本回报率与国内资本回报率、国际资本回报率一致时，企业得以实现最优化目标
-```
-````
+:::
 
-````{tab-item} 外国居民
+## 外国居民
 
 外国居民的最优化效用函数与国内居民一致，仍然为
 
@@ -272,9 +263,8 @@ $$
 
 由以上可知， $r_2^* = r_{g2}^*$
 
-````
+## 外国企业
 
-````{tab-item} 外国企业
 外国企业为私有企业，所以第 $t=1,2$ 期的最优化问题为
 
 $$
@@ -291,12 +281,9 @@ l_1^{d*}: AF_2(k_0^{d*}, l_1^{d*}) = w_1^* \\
 l_2^{d*}: AF_2(k_1^{d*}, l_2^{d*}) = w_2^* \\
 \end{align*}
 $$
-````
 
+:::
 
-
-
-`````
 
 ### 均衡分析
 
@@ -304,7 +291,7 @@ $$
 
 $$
 \begin{align*}
-& b_{c1} + b_{f1} + b_1^* = b_1 + b_1^d = 0 \\[2ex]
+& b_{c1} + b_{f1} + b_1^* = b_1 + b_1^d = 0 \\
 & l_1^d = l_2^d = l_1^{d*} = l_2^{d*} = L \\
 & k_0^d = k_{c0} , k_1^d = k_{c1} \\
 & k_0^{d*} = k_0^* , k_1^{d*} = k_1^* \\

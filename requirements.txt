@@ -1,1 +1,12 @@
+# quarto related
 jupyter
+nbformat
+jupyterlab
+
+# common
+numpy
+matplotlib
+statsmodels
+
+# marco-25
+plantuml

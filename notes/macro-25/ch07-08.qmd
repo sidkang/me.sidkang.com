@@ -17,8 +17,6 @@ kernelspec:
 
 对应书本第7、8讲
 
-
-
 ## 储蓄的基本概念
 
 $$
@@ -31,20 +29,21 @@ $$
 \end{align*}
 $$
 
-```{tip}
-:class: dropdown
+:::{.callout-note}
 
 !todo
-```
+
+:::
+
 
 ## 拉姆齐模型(仅居民积累资本)
 
-```{code-cell} python
-:tags: [remove-input]
-:align: center
+```{python}
+#| echo: false
+#| output: asis
+ 
 from plantuml import PlantUML
-from IPython.display import Image
-from myst_nb import glue
+from IPython.display import Image, Markdown
 
 uml = """
 @startuml
@@ -70,9 +69,9 @@ end
 """
 
 puml = PlantUML('http://www.plantuml.com/plantuml/png/')
-glue('ramsey-model-only-consumer', Image(url=puml.get_url(uml)), display=False)
+# Image(url=puml.get_url(uml), width=200)
+Markdown(f'![]({puml.get_url(uml)}){{width=50% fig-align="center"}}')
 ```
-
 
 
 ### 模型基础设定
@@ -80,16 +79,19 @@ glue('ramsey-model-only-consumer', Image(url=puml.get_url(uml)), display=False)
 - 两期限模型(two period model)
 - 资本折旧率为0
 
-```{tip}
+:::{.callout-tip}
 内生变量总体可以分为两大类：
+
 - **控制变量(control variable)**，这类取值在当期决定
 - **前定变量(pre-determined variable)**，这类取值在上一期被决定,也被称为**状态变量(state variable)**----时间下标根据类型而定
-```
+
+:::
 
 ### 居民决策
 
 经济增长的目标是什么，或者什么是评价经济增长的标准
-- ~~追求更高的人均产出（人均GDP）----(Solow模型)~~
+
+- ~~追求更高的人均产出，即人均GDP----Solow模型~~
 - 提升居民的福利，也就是提升居民的效用
 
 考虑到模型为两期模型，第二期结束后消费者将消费完所有资源，所以居民的效用偏好函数可以表示为

@@ -1,7 +1,7 @@
 ---
-title: 02.B工作-闲暇决策
+title: "Consumer and Firm Behavior: The Work-Leisure Decision and Profit Maximization"
+title-block-banner: true
 ---
-# Consumer and Firm Behavior: The Work-Leisure Decision and Profit Maximization
 
 Given that there is only one time period, consumers and firms make static, as opposed to dynamic, decisions.
 

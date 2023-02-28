@@ -7,11 +7,16 @@ website:
   title: SID's
   page-navigation: true
   navbar:
-    right:
+    left:
       - text: Notes
         file: notes/holder.qmd
       - text: Econ
         file: econ/index.qmd
+      - text: Invest
+        file: investments/invest.qmd
+    right:
+      - text: Reference
+        file: others/quarto_ref.qmd
   
   sidebar:
     - id: notes
@@ -28,21 +33,52 @@ website:
             - notes/macro-25/ch02-03.qmd
             - notes/macro-25/ch05-06.qmd
             - notes/macro-25/ch07-08.qmd
+            - notes/macro-25/ch09.qmd
+            - notes/macro-25/ch10.qmd
     
     - id: econ
       title: Econ
       contents:
         - econ/index.qmd
         - econ/2022/01.qmd
+        - econ/能源/introduction.qmd
+
+    - id: invest
+      title: Invest
+      file: investments/invest.qmd
+      contents:
+        - section: 持股
+          file: investments/invest.qmd
+          contents:
+            - section: 中国海洋石油
+              file: investments/holdings/cnooc/index.qmd
+              contents:
+                # - investments/holdings/cnooc/index.qmd
+                - investments/holdings/cnooc/2023-02-25.qmd
+                  
 
 
 format:
   html:
     smooth-scroll: true
-    theme: flatly
-    # max-width: 1920px
+    # theme: flatly
+    theme:
+      # - default
+      # - cosmo
+      # - sandstone
+      # - spacelab
+      - united
+      # - yeti
+      - assets/custom.scss
+    # page-layout: full
+
+    # number-sections: true
+    # number-offset: 0
     toc: true
-    css: style.css
+    toc-depth: 3
+    toc-title: "Table of Contents"
+    css: assets/style.css
+    include-in-header: assets/mathjax.html
     code-copy: true
     code-overflow: wrap
     grid:
