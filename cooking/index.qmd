@@ -2,4 +2,5 @@
 title: "Cooking"
 ---
 
-This is the cooking section
+This is the cooking section index page.
+
