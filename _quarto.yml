@@ -1,0 +1,28 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+
+website:
+  title: "SID's"
+  navbar:
+    # background: primary
+    search: true
+    right:
+      - text: Workouts
+        href: workouts/index.qmd
+      - text: Cooking
+        href: cooking/index.qmd
+  sidebar:
+    - title: "Workouts"
+      # style: "docked"
+      contents: workouts
+
+    - title: "Cooking"
+      contents: cooking
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: right

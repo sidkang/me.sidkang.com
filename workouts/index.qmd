@@ -1,0 +1,6 @@
+---
+title: "Workouts"
+comments: false
+---
+
+This is the workout page.
