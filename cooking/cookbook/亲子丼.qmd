@@ -5,10 +5,10 @@ title: "亲子丼"
 ## 材料 - Ingredients
 
 - 洋葱 Onion
-- 青葱 Spring Onion
 - 鸡腿肉 Chicken Thigh
 - 鸡蛋 Egg
 - 白饭 Cooked Rice
+- <可选> 青葱 Spring Onion
 - <可选> 海苔丝 Shredded Dried Seaweed
 
 ## 调味料 - Seasonings
@@ -16,7 +16,7 @@ title: "亲子丼"
 - 味淋 Mirin
 - 酱油 Soy Sauce
 - 日式高汤 Japanese Style Dashi Stock
-- <与高汤二选一> 鲣鱼酱油 Bonito Soy Sauce
+- <与高汤二选一> 鲣鱼/柴鱼酱油 Bonito Soy Sauce
 
 ## 詹姆士 - 简易版亲子丼
 

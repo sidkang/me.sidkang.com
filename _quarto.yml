@@ -9,11 +9,15 @@ website:
     # background: primary
     search: true
     right:
+      - text: Journals
+        href: Journals/index.qmd
       - text: Workouts
         href: workouts/index.qmd
       - text: Cooking
         href: cooking/index.qmd
   sidebar:
+    - title: "Journals"
+      contents: journals
     - title: "Workouts"
       # style: "docked"
       contents: workouts
