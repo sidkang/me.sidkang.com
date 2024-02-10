@@ -25,3 +25,7 @@ title: "亲子丼"
 ## MASA - 香煎滑嫩亲子丼
 
 {{< video https://www.youtube.com/watch?v=EiCNYPBZ6As >}}
+
+## 做饭记录
+
+第一次 2024-02-10 [2024-02-10-亲子丼](../records/2024/2024-02-10-亲子丼.qmd)
