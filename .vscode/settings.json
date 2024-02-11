@@ -1,4 +1,6 @@
 {
   "jupyter.kernels.filter": [],
-  "jupyter.disableJupyterAutoStart": true
+  "jupyter.disableJupyterAutoStart": true,
+  "pasteImage.prefix": "/",
+  "pasteImage.basePath": "${projectRoot}"
 }

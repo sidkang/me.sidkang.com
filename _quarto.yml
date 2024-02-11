@@ -2,6 +2,8 @@ project:
   type: website
   render:
     - "*.qmd"
+    - "!*-cooking.qmd"
+    - "!*-workout.qmd"
 
 website:
   title: "SID's"
@@ -31,4 +33,6 @@ format:
     theme: cosmo
     toc: true
     toc-location: right
+    grid:
+      body-width: 1000px
 

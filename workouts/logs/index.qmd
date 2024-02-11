@@ -1,6 +1,0 @@
----
-title: "Workout Logs"
----
-
-
-This is the workout index page.

@@ -1,5 +1,7 @@
 ---
 title: "Workouts"
+meta:
+  workout: true
 comments: false
 ---
 
