@@ -1,16 +1,24 @@
 project:
   type: website
+  preview:
+    port: 8001
   render:
     - "*.qmd"
-    - "!*-cooking.qmd"
+    - "!journals/**/*-cooking.qmd"
     - "!*-workout.qmd"
 
 website:
   title: "SID's"
+  site-url: https://me.sidkang.com
+  description: "A simple pseronal blog"
   navbar:
     # background: primary
     search: true
     right:
+      - text: Home
+        href: index.qmd
+      - text: Notes
+        href: notes/index.qmd
       - text: Journals
         href: journals/index.qmd
       - text: Workouts
@@ -18,19 +26,36 @@ website:
       - text: Cooking
         href: cooking/index.qmd
   sidebar:
+    - title: "Notes"
+      collapse-level: 3
+      contents:
+        - auto: notes
+
     - title: "Journals"
-      contents: journals
+      collapse-level: 3
+      contents:
+        - auto: journals
 
     - title: "Workouts"
       # style: "docked"
+      collapse-level: 3
       contents: workouts
 
     - title: "Cooking"
+      collapse-level: 3
       contents: cooking
+
+  page-footer:
+    border: false
+    left: "This page is built with ❤️  and [Quarto](https://quarto.org/)."
+    right:
+      - icon: github
+        href: https://github.com/sidkang
 
 format:
   html:
-    theme: cosmo
+    theme: litera
+    css: styles.css
     toc: true
     toc-location: right
     grid:
