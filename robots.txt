@@ -1,1 +1,1 @@
-Sitemap: https://sidkang.github.io/me.sidkang.com/sitemap.xml
+Sitemap: https://me.sidkang.com/sitemap.xml

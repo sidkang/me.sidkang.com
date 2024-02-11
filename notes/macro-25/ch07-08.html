@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SID’s</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SID’s</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../notes/index.html" aria-current="page"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../journals/index.html"> 
+<span class="menu-text">Journals</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../workouts/index.html"> 
+<span class="menu-text">Workouts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cooking/index.html"> 
+<span class="menu-text">Cooking</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/macro-25/index.html">宏观经济学二十五讲</a></li><li class="breadcrumb-item"><a href="../../notes/macro-25/ch07-08.html">消费与储蓄的决定</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes/macro-25/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">宏观经济学二十五讲</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/macro-25/ch07-08.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">消费与储蓄的决定</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#储蓄的基本概念" id="toc-储蓄的基本概念" class="nav-link active" data-scroll-target="#储蓄的基本概念">储蓄的基本概念</a></li>
+  <li><a href="#拉姆齐模型仅居民积累资本" id="toc-拉姆齐模型仅居民积累资本" class="nav-link" data-scroll-target="#拉姆齐模型仅居民积累资本">拉姆齐模型(仅居民积累资本)</a>
+  <ul class="collapse">
+  <li><a href="#模型基础设定" id="toc-模型基础设定" class="nav-link" data-scroll-target="#模型基础设定">模型基础设定</a></li>
+  <li><a href="#居民决策" id="toc-居民决策" class="nav-link" data-scroll-target="#居民决策">居民决策</a></li>
+  <li><a href="#企业决策" id="toc-企业决策" class="nav-link" data-scroll-target="#企业决策">企业决策</a></li>
+  <li><a href="#一般均衡" id="toc-一般均衡" class="nav-link" data-scroll-target="#一般均衡">一般均衡</a></li>
+  </ul></li>
+  <li><a href="#拉姆齐模型仅企业积累资本" id="toc-拉姆齐模型仅企业积累资本" class="nav-link" data-scroll-target="#拉姆齐模型仅企业积累资本">拉姆齐模型(仅企业积累资本)</a>
+  <ul class="collapse">
+  <li><a href="#模型设定" id="toc-模型设定" class="nav-link" data-scroll-target="#模型设定">模型设定</a></li>
+  <li><a href="#居民决策-1" id="toc-居民决策-1" class="nav-link" data-scroll-target="#居民决策-1">居民决策</a></li>
+  <li><a href="#企业决策-1" id="toc-企业决策-1" class="nav-link" data-scroll-target="#企业决策-1">企业决策</a></li>
+  <li><a href="#一般均衡-1" id="toc-一般均衡-1" class="nav-link" data-scroll-target="#一般均衡-1">一般均衡</a></li>
+  </ul></li>
+  <li><a href="#模型求解的三点技术注释" id="toc-模型求解的三点技术注释" class="nav-link" data-scroll-target="#模型求解的三点技术注释">模型求解的三点技术注释</a></li>
+  <li><a href="#拉姆齐模型居民与企业同时积累资本" id="toc-拉姆齐模型居民与企业同时积累资本" class="nav-link" data-scroll-target="#拉姆齐模型居民与企业同时积累资本">拉姆齐模型(居民与企业同时积累资本)</a>
+  <ul class="collapse">
+  <li><a href="#模型设定-1" id="toc-模型设定-1" class="nav-link" data-scroll-target="#模型设定-1">模型设定</a></li>
+  <li><a href="#居民决策-2" id="toc-居民决策-2" class="nav-link" data-scroll-target="#居民决策-2">居民决策</a></li>
+  <li><a href="#企业决策-2" id="toc-企业决策-2" class="nav-link" data-scroll-target="#企业决策-2">企业决策</a></li>
+  <li><a href="#一般均衡-2" id="toc-一般均衡-2" class="nav-link" data-scroll-target="#一般均衡-2">一般均衡</a></li>
+  </ul></li>
+  <li><a href="#对储蓄的分析" id="toc-对储蓄的分析" class="nav-link" data-scroll-target="#对储蓄的分析">对储蓄的分析</a>
+  <ul class="collapse">
+  <li><a href="#储蓄的定义" id="toc-储蓄的定义" class="nav-link" data-scroll-target="#储蓄的定义">储蓄的定义</a></li>
+  <li><a href="#总储蓄和净储蓄" id="toc-总储蓄和净储蓄" class="nav-link" data-scroll-target="#总储蓄和净储蓄">总储蓄和净储蓄</a></li>
+  </ul></li>
+  <li><a href="#现实中消费与储蓄如何决定" id="toc-现实中消费与储蓄如何决定" class="nav-link" data-scroll-target="#现实中消费与储蓄如何决定">现实中消费与储蓄如何决定</a>
+  <ul class="collapse">
+  <li><a href="#居民角度" id="toc-居民角度" class="nav-link" data-scroll-target="#居民角度">居民角度</a></li>
+  </ul></li>
+  <li><a href="#图形解释" id="toc-图形解释" class="nav-link" data-scroll-target="#图形解释">图形解释</a>
+  <ul class="collapse">
+  <li><a href="#企业的分红可能性边界" id="toc-企业的分红可能性边界" class="nav-link" data-scroll-target="#企业的分红可能性边界">企业的分红可能性边界</a></li>
+  <li><a href="#消费者的主观时间偏好" id="toc-消费者的主观时间偏好" class="nav-link" data-scroll-target="#消费者的主观时间偏好">消费者的主观时间偏好</a></li>
+  <li><a href="#企业所有权竞争市场中的企业与消费者" id="toc-企业所有权竞争市场中的企业与消费者" class="nav-link" data-scroll-target="#企业所有权竞争市场中的企业与消费者">企业所有权竞争市场中的企业与消费者</a></li>
+  </ul></li>
+  <li><a href="#再论萨伊定律及总结" id="toc-再论萨伊定律及总结" class="nav-link" data-scroll-target="#再论萨伊定律及总结">再论萨伊定律及总结</a></li>
+  <li><a href="#中国消费和储蓄的基本事实" id="toc-中国消费和储蓄的基本事实" class="nav-link" data-scroll-target="#中国消费和储蓄的基本事实">中国消费和储蓄的基本事实</a></li>
+  <li><a href="#模型与中国经济的数量分析" id="toc-模型与中国经济的数量分析" class="nav-link" data-scroll-target="#模型与中国经济的数量分析">模型与中国经济的数量分析</a></li>
+  <li><a href="#补充多期模型的扩展" id="toc-补充多期模型的扩展" class="nav-link" data-scroll-target="#补充多期模型的扩展">补充：多期模型的扩展</a></li>
+  <li><a href="#补充理性预期" id="toc-补充理性预期" class="nav-link" data-scroll-target="#补充理性预期">补充：理性预期</a></li>
+  <li><a href="#课后练习" id="toc-课后练习" class="nav-link" data-scroll-target="#课后练习">课后练习</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/macro-25/index.html">宏观经济学二十五讲</a></li><li class="breadcrumb-item"><a href="../../notes/macro-25/ch07-08.html">消费与储蓄的决定</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">消费与储蓄的决定</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>对应书本第7、8讲</p>
+<section id="储蓄的基本概念" class="level2">
+<h2 class="anchored" data-anchor-id="储蓄的基本概念">储蓄的基本概念</h2>
+<p><span class="math display">\[
+\begin{align*}
+\text{储蓄} &amp; \equiv \text{收入 $-$ 消费} \\
+\text{国民总储蓄} &amp; = \text{GDP $-$ 国民总消费 $=$ GDP $-$ C $-$ G} \\
+\text{居民储蓄} &amp; = \text{居民收入 $-$ 居民消费} \\
+\text{政府储蓄} &amp; = \text{政府收入 $-$ 政府消费} \\
+\text{企业储蓄} &amp; = \text{企业收入 $-$ 企业储蓄 $=$ 企业收入}
+\end{align*}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>!todo</p>
+</div>
+</div>
+</section>
+<section id="拉姆齐模型仅居民积累资本" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="拉姆齐模型仅居民积累资本">拉姆齐模型(仅居民积累资本)</h2>
+<section id="模型基础设定" class="level3">
+<h3 class="anchored" data-anchor-id="模型基础设定">模型基础设定</h3>
+<ul>
+<li>两期限模型(two period model)</li>
+<li>资本折旧率为0</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>内生变量总体可以分为两大类：</p>
+<ul>
+<li><strong>控制变量(control variable)</strong>，这类取值在当期决定</li>
+<li><strong>前定变量(pre-determined variable)</strong>，这类取值在上一期被决定,也被称为<strong>状态变量(state variable)</strong>—-时间下标根据类型而定</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="居民决策" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="居民决策">居民决策</h3>
+<p>经济增长的目标是什么，或者什么是评价经济增长的标准</p>
+<ul>
+<li><del>追求更高的人均产出，即人均GDP—-Solow模型</del></li>
+<li>提升居民的福利，也就是提升居民的效用</li>
+</ul>
+<p>考虑到模型为两期模型，第二期结束后消费者将消费完所有资源，所以居民的效用偏好函数可以表示为</p>
+<p><span class="math display">\[
+U = u(c_1)+\beta u(c_2)
+\]</span></p>
+<p>其中， <span class="math inline">\(0&lt;\beta&lt;1\)</span>，<span class="math inline">\(\beta\)</span>为居民的主观贴现因子，说明对于同1单位的消费，今天的消费相比未来的消费可以提升带来更高的效用</p>
+<p><span class="math display">\[
+\text{预算约束}
+\begin{cases}
+c_1 + k_1 &amp; \le k_0 + w_1L + (1+r_1)k_0 &amp; \text{第1期} \\
+c_2 &amp; \le k_1 + w_2L + (1+r_2)k_1 &amp; \text{第2期}
+\end{cases}
+\]</span></p>
+<p>当效用最大化时，两个预算约束条件一定为等式，则可以写成</p>
+<p><span class="math display">\[
+\begin{align*}
+\max_{c_1,c_2,k_1} u(c_1) + &amp; \beta u(c_2) \\
+\text{s.t.} \quad c_1 + k_1 &amp; = k_0 + w_1L + (1+r_1)k_0 \\
+c_2 \qquad &amp; = k_1 + w_2L + (1+r_2)k_1 \\
+\end{align*}
+\]</span></p>
+<p>设置拉格朗日函数</p>
+<p><span class="math display">\[
+\mathcal{L} = u(c_1) + \beta u(c_2) + \lambda_1[k_0+w_1L+(1+r_1)k_0-c_1-k_1]+\lambda_2[k_1+w_2L+(1+r_2)k_1-c_2]
+\]</span></p>
+<p>对于各内生变量，分别求一阶导后</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial \mathcal{L}}{\partial c_1} = 0 \Rightarrow &amp; u'(c_1) = \lambda_1 \\
+\frac{\partial \mathcal{L}}{\partial c_2} = 0 \Rightarrow &amp; \beta u'(c_2) = \Lambda_2 \\
+\frac{\partial \mathcal{L}}{\partial k_1} = 0 \Rightarrow &amp; \lambda_1 = \lambda_2(1+r_2)
+\end{align*}
+\]</span></p>
+<p>将拉格朗日乘子消去后得到下式，也可称作<code>欧拉方程(Euler Function)</code></p>
+<p><span class="math display">\[
+u'(c_1) = u'(c_2)(1+r_2)
+\]</span> (eular-equation)</p>
+<p>综上，可以看出欧拉方程是居民消费和储蓄的决策方程。居民的消费储蓄决定于两个要素： 1. 居民两期之间的效用比 <span class="math inline">\(u'(c_1)/\beta u'(c_2)\)</span> 2. 储蓄/资本回报率 <span class="math inline">\(r_2\)</span></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>mention <strong>?@fig-plot-01</strong></p>
+<p>时序图</p>
+</div></div><div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><a href="http://www.plantuml.com/plantuml/png/TP6nQiCm48RtUuhhrj24Hg9JCI6Xq2b3XsmUp65V4X595h9Cy_YHbDJ8j5rEqltV7Hy8jaCW7qQZuIcSsJ0wJSh2S57MaIU3dLCetzPbXuyqwd3WQzXfTRA6RS0s5lO04GcgLOvYxwEtmsZO8mtOzdQMVIflKlyOJpZvVdJunLxr7Gh0UhL90-zOQGfytUoNU6dMrUlz1Id3YAJPo1WAvuXa8jyX9pWjoStlHkoNp-B5Ds9HedMrAh6s4JyHssvk9g6UxynU4_-FrPJ_AIKVKd9HaB-SPEcqZILzs0q=.png" class="lightbox page-columns page-full" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="拉姆齐模型 仅居民积累资本的情况"><div class="no-row-height column-margin column-container"><img src="http://www.plantuml.com/plantuml/png/TP6nQiCm48RtUuhhrj24Hg9JCI6Xq2b3XsmUp65V4X595h9Cy_YHbDJ8j5rEqltV7Hy8jaCW7qQZuIcSsJ0wJSh2S57MaIU3dLCetzPbXuyqwd3WQzXfTRA6RS0s5lO04GcgLOvYxwEtmsZO8mtOzdQMVIflKlyOJpZvVdJunLxr7Gh0UhL90-zOQGfytUoNU6dMrUlz1Id3YAJPo1WAvuXa8jyX9pWjoStlHkoNp-B5Ds9HedMrAh6s4JyHssvk9g6UxynU4_-FrPJ_AIKVKd9HaB-SPEcqZILzs0q=.png" class="img-fluid figure-img" style="width:100.0%" alt="拉姆齐模型 仅居民积累资本的情况"></div></a></p>
+<figcaption>拉姆齐模型 仅居民积累资本的情况</figcaption>
+</figure>
+</div>
+</section>
+<section id="企业决策" class="level3">
+<h3 class="anchored" data-anchor-id="企业决策">企业决策</h3>
+<p>由于企业在每期末均进行清算，不进行资本或利润的留存，所以所有储蓄均在消费者处。即，企业每一期的最优化问题可以表达为</p>
+<p><span class="math display">\[
+\max_{k_{t-1}^d,l_t^d}AF[(k_{t-1}^d,l_t^d) - r_tk_{t-1}^d - w_tl_1^d] \qquad t=1,2
+\]</span></p>
+<p>一阶条件分别为</p>
+<p><span class="math display">\[
+AF_{k_{t-1}^d}(k_{t-1}^d,l_t^d)=r_t \\
+AF_{l_1^d}(k_{t-1}^d,l_t^d)=w_t
+\]</span></p>
+</section>
+<section id="一般均衡" class="level3">
+<h3 class="anchored" data-anchor-id="一般均衡">一般均衡</h3>
+<p>要达到<code>市场出清(market clear)</code>的情况下，需要以下条件达成</p>
+<p><span class="math display">\[
+\begin{align*}
+l_1^d &amp; =l_2^d=L \\
+k_o^d &amp; = k_0 \\
+k_1^d &amp; = k_1
+\end{align*}
+\]</span></p>
+<p>将其带入消费者的跨期欧拉方程 {eq}<code>eular-equation</code>、以及消费者的预算约束集后，可以得到</p>
+<p><span class="math display">\[
+\begin{align*}
+u'(c_1) \quad &amp; = \beta u'(c_2)[1 + AF_{k_1}(k_1,L)] \\[3ex]
+c_1 + k_1 &amp; = AF(k_0,L) + k_0 \\
+c_2 \qquad &amp; = AF(k_1, L) + k_1
+\end{align*}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>通过模型可知，消费者最优效用由<code>消费者的主观偏好</code>以及<code>客观世界所能提供的资本回报率</code>同时决定。</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>该模型相比于现实存在两个显著的缺陷</p>
+<ol type="1">
+<li>在此模型中，所有的储蓄决策都由消费者做出，模型中企业并未参与。而现实中企业是重要的储蓄/投资的参与者，绝大多数的居民储蓄需要靠企业储蓄转化为投资；同时，企业在每期结束后均会结业清盘，意味着企业只会存活1期，显然也不符合现实情形</li>
+<li>消费者的<span class="text-primary">主观偏好</span>无法预测、度量，那么如何应用于现实呢？</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="拉姆齐模型仅企业积累资本" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="拉姆齐模型仅企业积累资本">拉姆齐模型(仅企业积累资本)</h2>
+<section id="模型设定" class="level3">
+<h3 class="anchored" data-anchor-id="模型设定">模型设定</h3>
+<p>相比之前的模型设定，本此模型中，我们假设模型对应一个私有制社会—-<code>企业为居民所拥有，其股份由居民所持有</code> 具体会有以下的一些不同，可以通过时序图1和时序图2看出:</p>
+<ol type="1">
+<li>居民<strong>不再拥有</strong>储蓄/资本 <span class="math inline">\(k_t\)</span> ，所以居民也就<strong>无法</strong>通过向企业借出储蓄/资本以获得的资本回报 <span class="math inline">\(r_tk_{t-1}\)</span></li>
+<li>居民<strong>拥有</strong>企业的股份 <span class="math inline">\(s_t\)</span>
+<ul>
+<li>居民所持有的股份的价值是 <span class="math inline">\(v_ts_{t-1}\)</span> (<span class="math inline">\(v_t\)</span>为股票价值)</li>
+<li>也就意味着居民可以从企业收到所持股份的分红 <span class="math inline">\(d_ts_{t-1}\)</span></li>
+</ul></li>
+<li>企业股份的总股数正规化为1， 即 <span class="math inline">\(s_0 = s_1 = 1\)</span></li>
+<li>企业股权市场充分竞争</li>
+</ol>
+<p>其他假设条件：</p>
+<ol type="1">
+<li><code>待补充</code></li>
+</ol>
+</section>
+<section id="居民决策-1" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="居民决策-1">居民决策</h3>
+
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>第2期中，由于2期末世界毁灭😀，居民所持有的股份价值变为0</p>
+</div>
+</div></div><p>居民效用函数仍然维持 <span class="math inline">\(u(c_1)+ \beta u(c_2)\)</span> 这样的形式，约束方面则变为</p>
+<p><span class="math display">\[
+\text{预算约束}
+\begin{cases}
+c_1 + v_1s_1 &amp; \le w_1L + (v_1+d_1)s_0 &amp; \text{第1期} \\
+c_2 &amp; \le w_2L + d_2s_1 &amp; \text{第2期}
+\end{cases}
+\]</span></p>
+<p>将以上结合起来，居民的效用最优化问题可以写作</p>
+<p><span class="math display">\[
+\begin{align*}
+\max_{c_1,c_2,S_1} u(c_1)  + \beta u(c_2) &amp; \\
+\text{s.t.} \quad \quad
+c_1 + v_1s_1 &amp; = w_1L + (v_1+d_1)s_0 \\
+c_2 \qquad \quad &amp; = w_2L + d_2s_1
+\end{align*}
+\]</span></p>
+<p>设置拉格朗日函数</p>
+<p><span class="math display">\[
+\mathcal{L} = u(c_1) + \beta u(c_2) - \lambda_1[w_1L + (v_1+d_1)s_0 - c_1 - v_1s_1] - \lambda_2[w_2L + d_2s_1 - c_2]
+\]</span></p>
+<p>求得一阶导可得</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial \mathcal{L}}{\partial c_1} = 0 \Rightarrow &amp; u'(c_1) = \lambda_1 \\
+\frac{\partial \mathcal{L}}{\partial c_2} = 0 \Rightarrow &amp; \beta u'(c_2) = \Lambda_2 \\
+\frac{\partial \mathcal{L}}{\partial S_1} = 0 \Rightarrow &amp; \lambda_1v_1 = \lambda_2d_2
+\end{align*}
+\]</span></p>
+<p>将拉格朗日乘子消去后得到下式</p>
+<p><span class="math display">\[
+v_1 = \beta \frac{u'(c_2)}{u'(c_1)}d_2
+\]</span> (ramsy-model-only-firm-asset-pricing-equation)</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>从{eq}<code>ramsy-model-only-firm-asset-pricing-equation</code>可知，资产的价值来自于资产未来可以向所有者提供的现金流</p>
+<p>其中，<span class="math inline">\(\beta u'(c_2)/u'(c_1)\)</span> 被称为<code>随机贴现因子(stochastic discount factor)</code>，包含了跨期边际效用比，是 体现了居民主观偏好的一个折现因子</p>
+<ul>
+<li>居民主观偏好无法观测，所以该因子无法观测</li>
+<li>但同时方程也说明主观偏好可以通过资产价格反推得到</li>
+</ul>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><a href="http://www.plantuml.com/plantuml/png/bP8nQyCm48Lt_OhBqgaciUXKX4aeTChGeLievh0lZh0b2-bCGtzzPHaSUwYXonrwtxkJ7aWS0wFdmNHYvpms1e6f_m7s0uaTtyWGk0wr5Q7Lrg570xNJ85yEIuMkE7JyINS-TRgnXYn35Gjv8QA5TQKTHksjjs4mv043LBrTiNVjpQXVOnUDxmS77-HrNqCkBban-bz1TSXqByxF4Cg3saydyPI6G6LViwDTu3W9SS7eYTmWtugpsgSkqk2yFMdVPRw5wp9FTq-6YygMC9Jv7wHw4BBrEg1S19oUD-QR_QjuIMeVyD_Xv7OukHL1BYCSOna_pYy=.png" class="lightbox page-columns page-full" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="拉姆齐模型 企业积累资本"><div class="no-row-height column-margin column-container"><img src="http://www.plantuml.com/plantuml/png/bP8nQyCm48Lt_OhBqgaciUXKX4aeTChGeLievh0lZh0b2-bCGtzzPHaSUwYXonrwtxkJ7aWS0wFdmNHYvpms1e6f_m7s0uaTtyWGk0wr5Q7Lrg570xNJ85yEIuMkE7JyINS-TRgnXYn35Gjv8QA5TQKTHksjjs4mv043LBrTiNVjpQXVOnUDxmS77-HrNqCkBban-bz1TSXqByxF4Cg3saydyPI6G6LViwDTu3W9SS7eYTmWtugpsgSkqk2yFMdVPRw5wp9FTq-6YygMC9Jv7wHw4BBrEg1S19oUD-QR_QjuIMeVyD_Xv7OukHL1BYCSOna_pYy=.png" class="img-fluid figure-img" style="width:100.0%" alt="拉姆齐模型 企业积累资本"></div></a></p>
+<figcaption>拉姆齐模型 企业积累资本</figcaption>
+</figure>
+</div>
+</section>
+<section id="企业决策-1" class="level3">
+<h3 class="anchored" data-anchor-id="企业决策-1">企业决策</h3>
+<p>对于企业，在第2期中，因为第2期后世界毁灭，所以股权价值归为0，消费者为了提升效用将会尽量更多消费，所以消费者将会要求公司将所有资产在支付劳动后，将分红全部给予消费者</p>
+<p>其次，对于第1期，企业应该以分红最多为目标，即转化为企业的目标是<code>在分红前将企业股票价值最大化为目标</code>，可以记为 <span class="math inline">\(d_1 + v_1\)</span> ，如果企业不这么做，那么消费者作为股东会将管理层下岗，或者其他消费者可能会发起敌意并购再炒掉管理层</p>
+<p>同时可以参考居民在第1期中的预算约束</p>
+<p><span class="math display">\[
+c_1 + v_1s_1 \le w_1L + (\color{red}v_1+d_1 \color{black})s_0
+\]</span></p>
+<p>其中，居民的预算约束显然受限于企业的分红前股价，为了使居民效用最大化，企业也应该最大化居民的预算约束，即 <span class="math inline">\(v_1 + d_1\)</span> ，同时，带入{eq}<code>ramsy-model-only-firm-asset-pricing-equation</code>后，可得</p>
+<p><span class="math display">\[
+d_1 + v_1 = d_1 + \beta \frac{u'(c_2)}{u'(c_1)} d_2
+\]</span></p>
+<p>所以，企业的最优化问题可以写为</p>
+<p><span class="math display">\[
+\begin{align*}
+\max_{l_1^d, l_2^d, d_1, d_2, k_1} d_1 + \beta &amp; \frac{u'(c_2)}{u'(c_1)} d_2 \\
+\text{s.t.} \quad \quad
+d_1 + k_1 &amp; \le AF(k_0, l_1^d) - w_1l_1^d + k_0 \\
+d_2 \qquad &amp; \le AF(k_1, l_2^d) - w_2l_2^d + k_1
+\end{align*}
+\]</span></p>
+<p>在最优时，约束条件应该是等号，带回最优化目标后，可得</p>
+<p><span class="math display">\[
+\max_{l_1^d, l_2^d, k_1} AF(k_0, l_1^d) - w_1l_1^d + k_0 - k_1 + \beta \frac{u'(c_2)}{u'(c_1)} [AF(k_1, l_2^d) - w_2l_2^d + k_1]
+\]</span></p>
+<p>求一阶导，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial F}{\partial l_1^d} = 0 &amp; \Rightarrow AF_{l_1^d}(k_0, l_1^d) = w_1 \\
+\frac{\partial F}{\partial l_2^d} = 0 &amp; \Rightarrow AF_{l_2^d}(k_1, l_2^d) = w_2 \\
+\frac{\partial F}{\partial k_1} = 0 &amp; \Rightarrow \beta \frac{u'(c_2)}{u'(c_1)} [AF_{k_1}(k_1, l_2^d) + 1] = 1
+\end{align*}
+\]</span></p>
+</section>
+<section id="一般均衡-1" class="level3">
+<h3 class="anchored" data-anchor-id="一般均衡-1">一般均衡</h3>
+<p>在均衡时，可知有条件 $ l_1^d = l_2^d = L, s_1 = s_0 = 1 $, 上式可简化为</p>
+<p><span class="math display">\[
+u'(c_1) = \beta u'(c_2)[AF_{k_1}(k_1, L) + 1]
+\]</span></p>
+<p>对比拉姆齐模型（仅居民积累资本）中的均衡条件，完全相同。</p>
+<pre class="{note}"><code>:name: piercing-the-corporate-veil
+`刺穿企业帷幕(piercing the corporate veil)`
+
+以上模型说明，在居民拥有企业股权时，居民储蓄或企业储蓄效果相同，股票价格由居民决定，股票价值最大化，同时也意味着居民效用最大化，故`居民与企业两部门之间的收入分配变化不影响居民的消费与储蓄决策`</code></pre>
+</section>
+</section>
+<section id="模型求解的三点技术注释" class="level2">
+<h2 class="anchored" data-anchor-id="模型求解的三点技术注释">模型求解的三点技术注释</h2>
+<ol type="1">
+<li>居民优化问题中企业股份的选择
+<ul>
+<li>微观层面</li>
+<li>宏观层面</li>
+</ul></li>
+<li>企业的优化目标函数
+<ul>
+<li>间接联系 or 直接联系，通过价格 or 直接控制</li>
+<li>微观层面</li>
+<li>宏观层面</li>
+</ul></li>
+<li>均衡求解
+<ul>
+<li>取决于模型构造的目的，结果or结论？</li>
+</ul></li>
+</ol>
+</section>
+<section id="拉姆齐模型居民与企业同时积累资本" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="拉姆齐模型居民与企业同时积累资本">拉姆齐模型(居民与企业同时积累资本)</h2>
+<section id="模型设定-1" class="level3">
+<h3 class="anchored" data-anchor-id="模型设定-1">模型设定</h3>
+<ol type="1">
+<li>沿用之前的私有制社会设定—-<code>企业为居民所拥有，其股份由居民所持有</code>，世界依然在第2期毁灭</li>
+<li>居民和企业同时持有储蓄，对于t期期初，可分别标记为 <span class="math inline">\(k_{ct}\)</span> 以及 <span class="math inline">\(k_{ft}\)</span> ，同时假定第1期期初储蓄总量为常量 $ k_0 k_{c0} + k_{f0}$</li>
+<li>居民<strong>拥有</strong>企业的股份 <span class="math inline">\(s_t\)</span>
+<ul>
+<li>居民所持有的股份的价值是 <span class="math inline">\(v_ts_{t-1}\)</span> (<span class="math inline">\(v_t\)</span>为股票价值)</li>
+<li>也就意味着居民可以从企业收到所持股份的分红 <span class="math inline">\(d_ts_{t-1}\)</span></li>
+<li>1期分红后，居民可以 <span class="math inline">\(v_1\)</span> 价格交易股份，期末持有 <span class="math inline">\(s_1\)</span> 单位</li>
+</ul></li>
+<li>宏观层面，企业股份的总股数正规化为1， 即 <span class="math inline">\(s_0 = s_1 = 1\)</span></li>
+</ol>
+</section>
+<section id="居民决策-2" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="居民决策-2">居民决策</h3>
+<p>显然，居民效用函数仍然维持 <span class="math inline">\(u(c_1)+ \beta u(c_2)\)</span> 这样的形式，约束方面则变为</p>
+<p><span class="math display">\[
+\text{预算约束}
+\begin{cases}
+c_1 + k_{c1} + v_1s_1 &amp; \le w_1L + (1+r_1)k_{c0} + (v_1+d_1)s_0 &amp; \text{第1期} \\
+c_2 &amp; \le w_2L + (1+r_2)k_{c1} + d_2s_1 &amp; \text{第2期}
+\end{cases}
+\]</span></p>
+<p>将以上结合起来，则居民的效用最优化问题可以写作</p>
+<p><span class="math display">\[
+\begin{align*}
+\max_{c_1,c_2, k_{c1},s_1} u(c_1)  + \beta u(c_2) &amp; \\
+\text{s.t.} \quad \quad
+c_1 + k_{c1} + v_1s_1 &amp; \le w_1L + (1+r_1)k_{c0} + (v_1+d_1)s_0 \\
+c_2 \hspace{54pt} &amp; \le w_2L + (1+r_2)k_{c1} + d_2s_1
+\end{align*}
+\]</span></p>
+<p>目标函数最优时约束条件取等号，设定拉格朗日函数</p>
+<p><span class="math display">\[
+\mathcal{L} = u(c_1) + \beta u(c_2) + \lambda_1[w_1L + (1+r_1)k_{c0} + (v_1 + d_1)s_0 - c_1 - k_{c1} - v_1s_1] + \lambda_2[w_2L + (1+r_2)k_{c1} + d_2s_1 - c_2]
+\]</span></p>
+<p>求一阶导，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial F}{\partial c_1} = 0 &amp; \Rightarrow u'(c_1) = \lambda_1 \\
+\frac{\partial F}{\partial c_2} = 0 &amp; \Rightarrow \beta u'(c_2) = \lambda_2 \\
+\frac{\partial F}{\partial k_{c1}} = 0 &amp; \Rightarrow \lambda_1 = \lambda_2(1 + r_2) \\
+\frac{\partial F}{\partial s_1} = 0 &amp; \Rightarrow \lambda_1v_1 = \lambda_2d_2
+\end{align*}
+\]</span></p>
+<p>通过消去拉格朗日乘子，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+v_1 &amp; = \beta \frac{u'(c_2)}{u'(c_1)}d_2 \\
+1 &amp; = \beta \frac{u'(c_2)}{u'(c_1)}(1+r_2)
+\end{align*}
+\]</span></p>
+<p>两个等式分别对应股票和资产的定价方程，通过替换<code>随机贴现因子</code>，可以得到无套利条件：股权收益率应等于资本租借的收益率</p>
+<p><span class="math display">\[
+\frac{v_2}{d_1} = 1 + r_2
+\]</span></p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><a href="http://www.plantuml.com/plantuml/png/XPB1QyCW5CRl_XMlbx6oX4RPQOJIKUYfXnrsAqCaUKcbqOWQLZRwly-OaYMmjHV5x_tyVDz3id5UMD-fXYoC5RKIuB7z0cyx90j_H8LW6Y4rSIUfZR12GMaaiETigc0bkiQ_uzc_DhBM2hM78Yne2Gc8buKq8cZRLhjEeGNXe6ZrhBQJLlLw5NPIsxOpy8PMjYLGSaZNFVy2UICydjVx14xykyWk2JYUvQj19G_nCkJfnqW6hCek8n5C87ZrM42KyCVWDLZbgtWaqM9yBsgVdEwJH_faELtUXKjEOqy3SCZJQT5n-a-b-AsWBkS3O9C1N7kE-MdCFzwRnOzIdvwEpVuP_cfqCpqBM8pFbdVfahDR8Taqv2Oi_TVx0G==.png" class="lightbox page-columns page-full" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="拉姆齐模型 同时积累资本"><div class="no-row-height column-margin column-container"><img src="http://www.plantuml.com/plantuml/png/XPB1QyCW5CRl_XMlbx6oX4RPQOJIKUYfXnrsAqCaUKcbqOWQLZRwly-OaYMmjHV5x_tyVDz3id5UMD-fXYoC5RKIuB7z0cyx90j_H8LW6Y4rSIUfZR12GMaaiETigc0bkiQ_uzc_DhBM2hM78Yne2Gc8buKq8cZRLhjEeGNXe6ZrhBQJLlLw5NPIsxOpy8PMjYLGSaZNFVy2UICydjVx14xykyWk2JYUvQj19G_nCkJfnqW6hCek8n5C87ZrM42KyCVWDLZbgtWaqM9yBsgVdEwJH_faELtUXKjEOqy3SCZJQT5n-a-b-AsWBkS3O9C1N7kE-MdCFzwRnOzIdvwEpVuP_cfqCpqBM8pFbdVfahDR8Taqv2Oi_TVx0G==.png" class="img-fluid figure-img" alt="拉姆齐模型 同时积累资本"></div></a></p>
+<figcaption>拉姆齐模型 同时积累资本</figcaption>
+</figure>
+</div>
+</section>
+<section id="企业决策-2" class="level3">
+<h3 class="anchored" data-anchor-id="企业决策-2">企业决策</h3>
+<p>对于企业而言，企业的最优化目标仍然是第1期分红前的股价最大化，即 <span class="math inline">\(v_1 + d_1\)</span> ，同时最优化目标通过变化后也可以表达为两期贴现和最大值，即</p>
+<p><span class="math display">\[
+d_1 + v_1 = d_1 + \beta \frac{u'(c_2)}{u'(c_1)} d_2
+\]</span></p>
+<p>所以，企业的最优化问题可以记作</p>
+<p><span class="math display">\[
+\begin{align*}
+\max_{l_1^d, l_2^d, k_0^d, k_1^d, k_{f1}} d_1 + \beta &amp; \frac{u'(c_2)}{u'(c_1)} d_2 \\
+\text{s.t.} \quad \quad
+d_1 + k_{f1} &amp; \le AF(k_{f0} + k_0^d, l_1^d) - w_1l_1^d - r_1k_0^d + k_{f0} \\
+d_2 \hspace{25pt} &amp; \le AF(k_{f1} + k_1^d, l_2^d) - w_2l_2^d - r_2k_1^d + k_{f1}
+\end{align*}
+\]</span></p>
+<div class="callout-error">
+<p>暂时不太懂为什么这个地方的内生变量中是 <span class="math inline">\(k_0^d\)</span> 和 <span class="math inline">\(k_1^d\)</span></p>
+</div>
+<p>在最优时，约束条件应该是等号，带回最优化目标后，可得</p>
+<p><span class="math display">\[
+\max_{l_1^d, l_2^d, k_0^d, k_1^d, k_{f1}} [AF(k_{f0} + k_0^d, l_1^d) - w_1l_1^d - r_1k_0^d + k_{f0} - k_{f1}] + \beta \frac{u'(c_2)}{u'(c_1)}[AF(k_{f1} + k_1^d, l_2^d) - w_2l_2^d - r_2k_1^d + k_{f1}]
+\]</span></p>
+<p>求一阶导，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial F}{\partial l_1^d} = 0 \quad &amp; \Rightarrow \quad AF_{l_1^d}(k_{f0} + k_0^d, l_1^d) = w_1 \\
+\frac{\partial F}{\partial l_2^d} = 0 \quad &amp; \Rightarrow \quad AF_{l_2^d}(k_{f1} + k_1^d, l_2^d) = w_2 \\
+\frac{\partial F}{\partial k_0^d} = 0 \quad &amp; \Rightarrow \quad AF_{k_0^d}(k_{f0} + k_0^d, l_1^d) = r_1 \\
+\frac{\partial F}{\partial k_1^d} = 0 \quad &amp; \Rightarrow \quad AF_{k_1^d}(k_{f1} + k_1^d, l_2^d) = r_2 \\
+\frac{\partial F}{\partial k_{f1}} = 0 \quad &amp; \Rightarrow \quad 1 = \beta \frac{u'(c_2)}{u'(c_1)}[AF_{k_{f1}}(k_{f1} + k_1^d, l_2^d) + 1]
+\end{align*}
+\]</span></p>
+</section>
+<section id="一般均衡-2" class="level3">
+<h3 class="anchored" data-anchor-id="一般均衡-2">一般均衡</h3>
+<p>均衡时，劳动力、资本及股权市场全部出清，故有</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp; l_1^d = l_2^d = L \\
+&amp; k_0^d = k_0, k_1^d = k_1 \\
+&amp; s_0 = s_1 = 1
+\end{align*}
+\]</span></p>
+<p>同时有设定 <span class="math inline">\(k_0 \equiv k_{c0} + k_{f0}\)</span> ，再定义 <span class="math inline">\(k_1 \equiv k_{c1} + k_{f1}\)</span> ，代入一阶导后，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp; AF_{l_1^d}(k_0, L) = w_1 &amp; AF_{l_2^d}(k_1, L) = w_2 \\
+&amp; AF_{k_0^d}(k_0, L) = r_1 &amp; AF_{k_1^d}(k_1, L) = r_2
+\end{align*}
+\]</span></p>
+<p>考虑总体均衡时，居民部门在两期持有的股份数相同，都是1，通过变换居民和企业的预算约束，可以得到</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp; c_1 + k_{c1} &amp; = &amp; w_1L + (1+r_1)k_{c0} + d_1 \\
+&amp; c_2 &amp; = &amp; w_2L + (1+r_2)k_{c1} + d_2 \\[3ex]
+&amp; d_1 + k_{f1} &amp; = &amp; AF(k_0, L) - w_1L - r_1k_0 + k_{f0} \\
+&amp; d_2 &amp; = &amp; AF(k_1, L) - w_2L - r_2k_1 + k_{f1}
+\end{align*}
+\]</span></p>
+<p>通过消去 <span class="math inline">\(d_1\)</span> 和 <span class="math inline">\(d_2\)</span> ，可得等式，正好是两期中消费品市场出清的条件</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp; c_1 = AF(k_0,L) + k_0 - k_1 \\
+&amp; c_2 = AF(k_1,L) + k_1
+\end{align*}
+\]</span></p>
+<p>同时，将居民优化中的资本定价方程可以化为</p>
+<p><span class="math display">\[
+1 = \beta \frac{u'(c_2)}{u'(c_1)}(1+r_2) = \beta \frac{u'(c_2)}{u'(c_1)}[1+ AF_{k_1}(k_1, L)]
+\]</span></p>
+<p>综合上面三个式子，可得</p>
+<p><span class="math display">\[
+\begin{cases}
+u'(c_1) &amp; = \beta u'(c_2)[1+ AF_{k_1}(k_1, L)] \\
+c_1 +k_1 &amp; = AF(k_0,L) + k_0 &amp;&amp; \text{1期资源总约束} \\
+c_2 &amp; = AF(k_1,L) + k_1 &amp;&amp; \text{2期资源总约束}
+\end{cases}
+\]</span></p>
+</section>
+</section>
+<section id="对储蓄的分析" class="level2">
+<h2 class="anchored" data-anchor-id="对储蓄的分析">对储蓄的分析</h2>
+<section id="储蓄的定义" class="level3">
+<h3 class="anchored" data-anchor-id="储蓄的定义">储蓄的定义</h3>
+<p>首先，第1期社会总储蓄</p>
+<p><span class="math display">\[ saving = AF(k_0, L) - c_1 = k_1 - k_0 \]</span></p>
+<p>第1期中单个居民的预算约束可以表示为居民收入减去居民消费</p>
+<p><span class="math display">\[
+saving_c^{Micro} = r_1k_{c0} + w_1L + d_1s_0 - c_1 = (k_{c1} - k_{c_0}) + (v_1s_1 - v_1s_0)
+\]</span> (consumer-saving-micro-equation)</p>
+<p>通过将居民预算约束变形可得出</p>
+<p><span class="math display">\[
+saving_c = r_1k_{c0} + w_1L + d_1 - c_1 = k_{c1} - k_{c0}
+\]</span> (consumer-saving-macro-equation)</p>
+<p>```<code>paladagdbhsv 如何理解居民储蓄在微观层面以及宏观层面的两个等式 1. 微观层面到宏观层面的思路    - 微观等式{eq}</code>consumer-saving-micro-equation<code>来说，居民的储蓄被用于两方面：1）资本的增量；2）股份的增量    - 宏观等式{eq}</code>consumer-saving-macro-equation<code>来说，居民的储蓄仅被用于资本的增量这一用途    - 这种差异是因为企业所有权均由居民持有，假设居民宏观层面增加或减少持股数，则企业所有权市场显然处于未出清状态，所以居民在跨期中并未变动总持股量，所以这样就导致在宏观层面，居民的储蓄仅被用于了资本增量 2. 注意区分微观变量与宏观变量    - 微观等式{eq}</code>consumer-saving-micro-equation<code>和宏观等式{eq}</code>consumer-saving-macro-equation`中 <span class="math inline">\(d_1\)</span> 的系数相对特殊，微观等式中为 <span class="math inline">\(s_0\)</span> 。而宏观等式中为 <span class="math inline">\(1\)</span> 。其实微观和宏观等式中系数即便相同，其含义也是不同的</p>
+<p>````</p>
+<p>如{eq}<code>consumer-saving-macro-equation</code>，通过对企业预算约束等式进行变换，则可得到企业部门的储蓄表达式</p>
+<p><span class="math display">\[
+saving_f = AF(k_0, L) - w_1L - r_1k_0 - d_1 = k_{f1} - f_{f0}
+\]</span> (firm-saving-macro-equation)</p>
+<p>将居民的储蓄等式{eq}<code>consumer-saving-macro-equation</code>和企业的储蓄等式{eq}<code>firm-saving-macro-equation</code>相加后可得</p>
+<p><span class="math display">\[
+saving_c + saving_f = k_{c1} - k_{c0} + k_{f1} - k_{f0} = (k_{c1} + k_{f1}) - (k_{c0} + k_{f0}) = k_1 - k_0
+\]</span></p>
+<p>居民与企业总储蓄仅与宏观变量 <span class="math inline">\(k_1\)</span> 有关，这无疑验证了{ref}<code>刺穿企业帷幕&lt;piercing-the-corporate-veil&gt;</code>理论</p>
+</section>
+<section id="总储蓄和净储蓄" class="level3">
+<h3 class="anchored" data-anchor-id="总储蓄和净储蓄">总储蓄和净储蓄</h3>
+<dl>
+<dt>总储蓄(gross saving)</dt>
+<dd>
+部门的收入 - 消费
+</dd>
+<dt>净储蓄(net saving)</dt>
+<dd>
+部门的总储蓄 - 投资
+</dd>
+</dl>
+<p>资金总是从净储蓄为正的部门流向净储蓄为负的部门。若将概念运用于国家层面，国家总储蓄与总投资之间的缺口需要国家贸易及国际资本流动解决。一个国家如果有正的净储蓄需要借给外国，则其表现为产品和服务的净流出国，因而形成<code>经常账户(current account)</code>的<strong>顺差</strong></p>
+<p><span class="math display">\[
+\begin{align*}
+S &amp;= Y - C \\
+S_{net} &amp;= S - I \\
+CA &amp;= S - I = S_net
+\end{align*}
+\]</span></p>
+</section>
+</section>
+<section id="现实中消费与储蓄如何决定" class="level2">
+<h2 class="anchored" data-anchor-id="现实中消费与储蓄如何决定">现实中消费与储蓄如何决定</h2>
+<section id="居民角度" class="level3">
+<h3 class="anchored" data-anchor-id="居民角度">居民角度</h3>
+<p>消费者想要最大化效用 <span class="math inline">\(U\)</span>，而因为今天和明天同1单位消费的效用是不同的，所以对于两期模型，最大化效用可以表达为 <span class="math inline">\(U(c_1) + \beta U(c_2)\)</span> ，其中 <span class="math inline">\(0&lt; \beta &lt; 1\)</span></p>
+<ul>
+<li>因为人性不耐，所以未来的效用需要贴现（打折扣）</li>
+<li>消费者通过选择消费或储蓄来达到效用最大化
+<ul>
+<li>消费在每一期的边际效用是逐步递减的，所以消费需要在各期尽量平滑分布</li>
+<li>通过储蓄，消费者可以在不同期之间转移消费，以实现消费的平滑分布</li>
+</ul></li>
+</ul>
+<pre class="{note}"><code>最优消费/储蓄的状态是指消费者在`消费的主观偏好`与`资本回报率`之间的平衡，也就是`消费者跨期效用比`与`资本回报率`之间的平衡。</code></pre>
+</section>
+</section>
+<section id="图形解释" class="level2">
+<h2 class="anchored" data-anchor-id="图形解释">图形解释</h2>
+<p>TBD</p>
+<section id="企业的分红可能性边界" class="level3">
+<h3 class="anchored" data-anchor-id="企业的分红可能性边界">企业的分红可能性边界</h3>
+</section>
+<section id="消费者的主观时间偏好" class="level3">
+<h3 class="anchored" data-anchor-id="消费者的主观时间偏好">消费者的主观时间偏好</h3>
+</section>
+<section id="企业所有权竞争市场中的企业与消费者" class="level3">
+<h3 class="anchored" data-anchor-id="企业所有权竞争市场中的企业与消费者">企业所有权竞争市场中的企业与消费者</h3>
+</section>
+</section>
+<section id="再论萨伊定律及总结" class="level2">
+<h2 class="anchored" data-anchor-id="再论萨伊定律及总结">再论萨伊定律及总结</h2>
+<p>萨伊定律认为宏观经济中不太可能出现生产过剩及就业不足，反映了起对市场高效运作的信心 - 生产是因为需求已经在之前产生 - bug：生产可能一部分是出于储蓄动机</p>
+<p>最优消费储蓄在真实世界实现的前提条件 - 企业所有权归居民所有 - 企业所有权市场（资本市场）是竞争市场</p>
+<p>实现机制 - 资本市场中消费者通过股权的定价来体现出对资产回报率的要求，同时也反映出跨期效用比 - 投资回报率是企业所有权向消费者提供的回报率 - 两者形成均衡 - 投资较多，资本回报率下降，消费者将要求企业增加分红，资本流向消费者 - 投资较少，资本回报率较高时，消费者将追加投资</p>
+<pre class="{hint}"><code>所以，实际上拉姆齐模型实际上隐含着萨伊定律的成立，这也意味着该模型情况下，经济增长的瓶颈在于供给面，而非需求面。</code></pre>
+</section>
+<section id="中国消费和储蓄的基本事实" class="level2">
+<h2 class="anchored" data-anchor-id="中国消费和储蓄的基本事实">中国消费和储蓄的基本事实</h2>
+<p>TBD</p>
+</section>
+<section id="模型与中国经济的数量分析" class="level2">
+<h2 class="anchored" data-anchor-id="模型与中国经济的数量分析">模型与中国经济的数量分析</h2>
+<pre class="{caution}"><code>TBD</code></pre>
+</section>
+<section id="补充多期模型的扩展" class="level2">
+<h2 class="anchored" data-anchor-id="补充多期模型的扩展">补充：多期模型的扩展</h2>
+</section>
+<section id="补充理性预期" class="level2">
+<h2 class="anchored" data-anchor-id="补充理性预期">补充：理性预期</h2>
+<pre class="{caution}"><code>TBD</code></pre>
+</section>
+<section id="课后练习" class="level2">
+<h2 class="anchored" data-anchor-id="课后练习">课后练习</h2>
+<p>:::{admonition} 问题 :class: exercise</p>
+<p>拉姆齐两期模型中，嘉定企业的生产函数为 <span class="math inline">\(y=k^{0.5}\)</span> （生产不需要劳动力），全社会在第1期期初的资本存量为1。在第1期期初全社会的总资本中，有一半属于居民，一半属于企业，并且企业所有权在居民手中 1. 请画出模型的时序图并定义模型均衡 2. 求解均衡时居民两期的消费量以及第2期的资本回报率 :::</p>
+<p>```vdoxdxmtmgt python :tags: [remove-input]</p>
+<p>from plantuml import PlantUML from IPython.display import Image from myst_nb import glue</p>
+<p>uml = ““” <span class="citation" data-cites="startuml">@startuml</span> !pragma teoz true !theme plain skinparam dpi 240 skinparam defaultTextAlignment center</p>
+<p>participant Consumer as con participant Firm as firm group Period 1 [-&gt; con: <latex>k_{c0}, s_0</latex> &amp; firm &lt;-]: <latex>k_{f0}</latex> con -&gt; firm: <math>k_{c0}</math> firm -&gt; con: <math>(1+r_1)k_{c0}</math> firm -&gt; con: <math>d_1s_0</math> [&lt;- con: <math>s_1</math> [&lt;- con: <math>c_1</math> end group Period 2 [-&gt; con: <math>k_{c1}, s_1</math> &amp; firm &lt;-]: <math>k_{f1}</math> con -&gt; firm: <math>k_{c1}</math> firm -&gt; con: <math>(1+r_2)k_{c1}</math> firm -&gt; con: <math>d_2s_1</math> [&lt;- con: <math>c_2</math> end <span class="citation" data-cites="enduml">@enduml</span> ““”</p>
+<p>puml = PlantUML(‘http://www.plantuml.com/plantuml/png/’) glue(‘marco25-08-ramsy-model-exercise’, Image(url=puml.get_url(uml)), display=False)</p>
+<pre><code>
+:::::{admonition} 答案
+:class: solution dropdown
+
+**第一题**
+
+```{glue:figure} marco25-08-ramsy-model-exercise
+:figwidth: 40%
+时序图</code></pre>
+<p>居民方面：</p>
+<p>居民的效用最大化目标函数及约束条件是</p>
+<p><span class="math display">\[
+\max_{c_1,c_2,s_1,k_{c1}} u(c_1) + \beta u(c_2) \hspace{60pt} \\[2ex]
+\begin{align*}
+&amp; c_1 + k_{c1} + v_1s_1 &amp; \le &amp; (1 + r_1)k_{c0} + d_1s_0 + v_1s_0 \\
+&amp; c_2 &amp; \le &amp; (1 + r_2)k_{c1} + d_2s_1
+\end{align*}
+\]</span></p>
+<p>在目标函数达到最优化时，约束条件取等号，设置拉格朗日函数，可得</p>
+<p><span class="math display">\[
+\mathcal{L} = u(c_1) + \beta u(c_2) + \lambda_1[(1 + r_1)k_{c0} + d_1s_0 + v_1s_0 - c_1 - k_{c1} - v_1s_1] + \lambda_2[(1 + r_2)k_{c1} + d_2s_1 - c_2]
+\]</span></p>
+<p>取一阶导数，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial F}{\partial c_1} = 0 &amp; \Rightarrow u'(c_1) = \lambda_1 \\
+\frac{\partial F}{\partial c_2} = 0 &amp; \Rightarrow \beta u'(c_2) = \lambda_2 \\
+\frac{\partial F}{\partial k_{c1}} = 0 &amp; \Rightarrow \lambda_1 = \lambda_2(1 + r_2) \\
+\frac{\partial F}{\partial s_1} = 0 &amp; \Rightarrow \lambda_1v_1 = \lambda_2d_2
+\end{align*}
+\]</span></p>
+<p>消去拉格朗日乘子，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+1 &amp;= \beta \frac{u'(c_2)}{u'(c_1)} (1+r_2) \\
+v_1 &amp;= \beta \frac{u'(c_2)}{u'(c_1)} d_2
+\end{align*}
+\]</span></p>
+<p>企业方面：</p>
+<p>企业的效用最大化目标函数及约束条件是</p>
+<p><span class="math display">\[
+\max_{k_0^d, k_1^d, k_{f1}} v_1 + d_1 \hspace{40pt} \\[2ex]
+\begin{align*}
+&amp; k_{f1} + d_1 &amp; \le &amp; F(k_{f0} + k_0^d) - r_1k_0^d + k_{f0} \\
+&amp; d_2 &amp; \le &amp; F(k_{f1} + k_1^d) - r_2k_1^d + k_{f1}
+\end{align*}
+\]</span></p>
+<p>在目标函数最优化时，约束条件应该取等号，将消费者及企业约束条件分别带入目标函数，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+\max_{k_0^d, k_1^d, k_{f1}} v_1 + d_1 &amp; =  \beta \frac{u'(c_2)}{u'(c_1)} d_2 + d_1 \\
+&amp; = \beta \frac{u'(c_2)}{u'(c_1)} [F(k_{f1} + k_1^d) - r_2k_1^d + k_{f1}] + [F(k_{f0} + k_0^d) - r_1k_0^d + k_{f0} - k_{f1}]
+\end{align*}
+\]</span></p>
+<p>取一阶导，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial F}{\partial k_0^d} = 0 \quad &amp; \Rightarrow \quad F'(k_{f0} + k_0^d) = r_1 \\
+\frac{\partial F}{\partial k_1^d} = 0 \quad &amp; \Rightarrow \quad F'(k_{f1} + k_1^d) = r_2 \\
+\frac{\partial F}{\partial k_{f1}} = 0 \quad &amp; \Rightarrow \quad 1 = \beta \frac{u'(c_2)}{u'(c_1)}[F'(k_{f1} + k_1^d) + 1]
+\end{align*}
+\]</span></p>
+<p>均衡分析：</p>
+<p>均衡时，劳动力、资本、企业所有权市场应该处于出清状态，可知一下等式成立</p>
+<p><span class="math display">\[
+\begin{align*}
+k_0^d &amp;= k_{c0} \\
+k_1^d &amp;= k_{c1} \\
+s_1 &amp;= s_0 = 1
+\end{align*}
+\]</span></p>
+<p>则企业优化条件可以转换为</p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial F}{\partial k_0^d} = 0 \quad &amp; \Rightarrow \quad F'(k_0) = r_1 \\
+\frac{\partial F}{\partial k_1^d} = 0 \quad &amp; \Rightarrow \quad F'(k_1) = r_2 \\
+\frac{\partial F}{\partial k_{f1}} = 0 \quad &amp; \Rightarrow \quad 1 = \beta \frac{u'(c_2)}{u'(c_1)}[F'(k_1) + 1]
+\end{align*}
+\]</span></p>
+<p>均衡时，由于企业部门在两期持有的股票数量不变，均为1，则居民部门在最优时的预算约束可变形为</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp; c_1 + k_{c1} &amp;= (1 + r_1)k_{c0} + d_1 \\
+&amp; c_2 &amp;= (1 + r_2)k_{c1} + d_2
+\end{align*}
+\]</span></p>
+<p>企业部门最优化的约束条件可以变换为</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp; k_{f1} + d_1 &amp; = F(k_0) - r_1k_{c0} + k_{f0} \\
+&amp; d_2 &amp; = F(k_1) - r_2k_{c1} + k_{f1}
+\end{align*}
+\]</span></p>
+<p>将变换后的企业约束条件带入居民部门的约束条件等式，消去 <span class="math inline">\(d_1\)</span> 和 <span class="math inline">\(d_2\)</span> ，可得</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp; c_1 + k_{c1} &amp;=&amp; (1 + r_1)k_{c0} + F(k_0) - r_1k_{c0} + k_{f0} - k_{f1} &amp;=&amp; F(k_0) + k_0 -k_{f1} \\
+&amp; c_2 &amp;=&amp; (1 + r_2)k_{c1} + F(k_1) - r_2k_{c1} + k_{f1} &amp;=&amp; F(k_1) +k_1
+\end{align*}
+\]</span></p>
+<p>所以，综合以上居民部门约束条件以及企业的欧拉方程，可得到均衡状态的条件是</p>
+<p><span class="math display">\[
+\begin{cases}
+c_1 + k_{c1} &amp;= F(k_0) + k_0 -k_{f1} \\
+c_2 &amp;= F(k_1) +k_1 \\
+u'(c_1) &amp;= \beta u'(c_2)[F'(k_1) + 1]
+\end{cases}
+\]</span></p>
+<hr>
+<p><strong>第二题</strong></p>
+<p>我们将居民效用函数取为 CRRA 形式，即为</p>
+<p><span class="math display">\[
+U = \frac{c_1^{1- \sigma}}{1 - \sigma} + \beta \frac{c_2^{1- \sigma}}{1 - \sigma}
+\]</span></p>
+<p>根据一般情况， <span class="math inline">\(\sigma\)</span> 作为居民的相对风险规避系数，一般取值为2， <span class="math inline">\(\beta\)</span> 作为消费者主观贴现因子，根据宏观惯例一般取值是0.98，则居民效用函数具体为</p>
+<p><span class="math display">\[
+U = - \frac{1}{c_1} - \frac{0.98}{c_2}
+\]</span></p>
+<p>根据条目给定条件，可知有一下条件等式成立</p>
+<p><span class="math display">\[
+\begin{align*}
+F(k) = k^{0.5} \\
+k_{c0} + k_{f0} = k_0 = 1 \\
+k_{c0} = k_{f0} = 0.5
+\end{align*}
+\]</span></p>
+<p>将条件带入均衡状态条件组后，结合企业的优化条件，可得</p>
+<p><span class="math display">\[
+\begin{cases}
+c_1 &amp;= F(k_0) + k_0 -k_{f1} - k_{c1} = 1^{0.5} + 1 - k_1 = 2 -k_1 \\
+c_2 &amp;= F(k_1) +k_1 = k_1^{0.5} + k_1 \\
+u'(c_1) &amp;= \beta u'(c_2)[F'(k_1)+1] =  \beta u'(c_2)(0.5k_1^{-0.5} + 1)
+\end{cases}
+\]</span></p>
+<p>整理后可得</p>
+<p><span class="math display">\[
+\begin{cases}
+c_1 &amp; = 2 -k_1 \\
+c_2 &amp; = k_1^{0.5} + k_1 \\
+(\frac{c_2}{c_1})^2 &amp; = 0.98 (0.5k_1^{-0.5} + 1)
+\end{cases}
+\]</span></p>
+<p>通过变换条件，将方程组变为 <span class="math inline">\(k_1\)</span> 的一元方程，通过以下python代码求解</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> root</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (( (x<span class="op">**</span><span class="fl">0.5</span> <span class="op">+</span> x)<span class="op">/</span>(x<span class="op">-</span><span class="dv">2</span>) )<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="fl">0.98</span> <span class="op">*</span> (<span class="fl">0.5</span> <span class="op">*</span> (x<span class="op">**-</span><span class="fl">0.5</span>) <span class="op">+</span> <span class="dv">1</span>))<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> root(func, <span class="dv">1</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> sol.x</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>c1 <span class="op">=</span> <span class="dv">2</span> <span class="op">-</span> k</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>c2 <span class="op">=</span> k<span class="op">**</span><span class="fl">0.5</span> <span class="op">+</span> k</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>r2 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (k<span class="op">**-</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>通过代码求解，可解得一期消费<span class="math inline">\(c_1\)</span>为{glue:text}<code>marco25-08-01-c1:.4f</code>，二期消费<span class="math inline">\(c_2\)</span>为{glue:text}<code>marco25-08-01-c2:.4f</code>，一期期末总资本<span class="math inline">\(k_1\)</span>为{glue:text}<code>marco25-08-01-k1:.4f</code>。二期资本收益率<span class="math inline">\(r_2\)</span>为{glue:text}<code>marco25-08-01-r2:.2%</code></p>
+<p>:::::</p>
+<p>```vdoxdxmtmgt python :tags: [remove-cell] from scipy.optimize import root</p>
+<p>def func(x): return (( (x<strong>0.5 + x)/(x-2) )</strong>2 - 0.98 * (0.5 * (x<strong>-0.5) + 1))</strong>2</p>
+<p>sol = root(func, 1) k = sol.x[0] c1 = 2 - k c2 = k<strong>0.5 + k r2 = 0.5 * (k</strong>-0.5)</p>
+<p>glue(“marco25-08-01-c1”, c1) glue(“marco25-08-01-c2”, c2) glue(“marco25-08-01-k1”, k) glue(“marco25-08-01-r2”, r2) ```</p>
+<p>:::{admonition} 问题 :class: exercise</p>
+<p>以下几个小问题可以帮助大家熟悉储蓄的概念 1. 海解释以下几个概念：国民总储蓄、居民储蓄、企业储蓄、政府储蓄 2. 请列举出以上几个概念在真实世界中的具体表现北式（无须穷尽，指出几个例子即可。如，居民的银行存款是居民储蓄的一种表现形式） 3. 请查找最近一年的宏观统计数据，计算以上几个概念对应的指标占中国当年 GDP 的比重。（提示：在中国国家统计局每年发布的中国资金流量表（实物部分）中可以找到这些数据） 4. 请计算不包含中国的全球经济储蓄率（国民总储蓄占 GDP 的比重），并将其与中国的储蓄率做对比。从中你能得到什么样的启示？[提示：在国际货币基金组织（IMF)的国际经济展望数据库 (World Economic Outlook Database）中可以查到相关数据] :::</p>
+<p>:::{admonition} 问题 :class: exercise</p>
+<p>你认为萨伊定律在中国成立吗？请论述你的论点、逻辑和证据。 :::</p>
+<p>:::{admonition} 答案 :class: answer dropdown</p>
+<p>结论是萨伊定律在中国不能成立。</p>
+<p>:::</p>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">拉姆齐模型 仅居民积累资本的情况</span>
+<span class="glightbox-desc lightbox-desc-2">拉姆齐模型 企业积累资本</span>
+<span class="glightbox-desc lightbox-desc-3">拉姆齐模型 同时积累资本</span>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sidkang">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>
