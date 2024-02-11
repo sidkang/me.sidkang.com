@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/workouts/logs/index.html</loc>
-    <lastmod>2024-02-10T10:14:17.122Z</lastmod>
+    <loc>https://sidkang.github.io/me.sidkang.com/workouts/index.html</loc>
+    <lastmod>2024-02-11T01:16:39.753Z</lastmod>
   </url>
   <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/workouts/logs/2024-02/2024-02-10.html</loc>
-    <lastmod>2024-02-10T10:14:17.122Z</lastmod>
+    <loc>https://sidkang.github.io/me.sidkang.com/journals/2024/02/2024-02-11.html</loc>
+    <lastmod>2024-02-11T03:31:50.696Z</lastmod>
   </url>
   <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/journals/index.html</loc>
-    <lastmod>2024-02-10T12:48:51.238Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/cooking/records/2024/2024-02-10-亲子丼.html</loc>
-    <lastmod>2024-02-10T12:24:33.562Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/cooking/cookbook/亲子丼.html</loc>
-    <lastmod>2024-02-10T12:37:11.645Z</lastmod>
+    <loc>https://sidkang.github.io/me.sidkang.com/cooking/日式/姜烧猪肉.html</loc>
+    <lastmod>2024-02-11T03:42:25.055Z</lastmod>
   </url>
   <url>
     <loc>https://sidkang.github.io/me.sidkang.com/cooking/index.html</loc>
     <lastmod>2024-02-10T10:35:20.902Z</lastmod>
   </url>
   <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/journals/2024/2024-02.html</loc>
-    <lastmod>2024-02-10T13:37:04.715Z</lastmod>
+    <loc>https://sidkang.github.io/me.sidkang.com/cooking/日式/亲子丼.html</loc>
+    <lastmod>2024-02-11T02:35:58.476Z</lastmod>
   </url>
   <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/workouts/index.html</loc>
-    <lastmod>2024-02-10T10:14:17.121Z</lastmod>
+    <loc>https://sidkang.github.io/me.sidkang.com/journals/2024/02/2024-02-10.html</loc>
+    <lastmod>2024-02-11T02:37:41.593Z</lastmod>
   </url>
   <url>
-    <loc>https://sidkang.github.io/me.sidkang.com/workouts/logs/2024-02/index.html</loc>
-    <lastmod>2024-02-10T10:14:17.122Z</lastmod>
+    <loc>https://sidkang.github.io/me.sidkang.com/journals/index.html</loc>
+    <lastmod>2024-02-10T12:48:51.238Z</lastmod>
   </url>
 </urlset>
