@@ -150,13 +150,10 @@ $$ (eular-equation)
 
 :::{.column-margin}
 
-mention @fig-plot-01
-
-时序图
+![拉姆齐模型 仅居民积累资本的情况](`{python} puml.get_url(uml)`){.lightbox width=100%}
 
 :::
 
-![拉姆齐模型 仅居民积累资本的情况](`{python} puml.get_url(uml)`){.lightbox .column-margin width=100%}
 
 ### 企业决策
 
@@ -532,7 +529,7 @@ d_2 \hspace{25pt} & \le AF(k_{f1} + k_1^d, l_2^d) - w_2l_2^d - r_2k_1^d + k_{f1}
 \end{align*}
 $$
 
-::: {.callout-error}
+::: {.callout-caution}
 暂时不太懂为什么这个地方的内生变量中是 $k_0^d$ 和 $k_1^d$
 :::
 
@@ -623,23 +620,28 @@ $$ saving = AF(k_0, L) - c_1 = k_1 - k_0 $$
 
 $$
 saving_c^{Micro} = r_1k_{c0} + w_1L + d_1s_0 - c_1 = (k_{c1} - k_{c_0}) + (v_1s_1 - v_1s_0)
-$$ (consumer-saving-micro-equation)
+$$ {#eq-consumer-saving-micro-equation}
 
 通过将居民预算约束变形可得出
 
 $$
 saving_c = r_1k_{c0} + w_1L + d_1 - c_1 = k_{c1} - k_{c0}
-$$ (consumer-saving-macro-equation)
+$$ {#eq-consumer-saving-macro-equation}
 
-````{prf:remark} 如何理解居民储蓄在微观层面以及宏观层面的两个等式
+::: {.proof}
+
+### 如何理解居民储蓄在微观层面以及宏观层面的两个等式
+
 1. 微观层面到宏观层面的思路
-   - 微观等式{eq}`consumer-saving-micro-equation`来说，居民的储蓄被用于两方面：1）资本的增量；2）股份的增量
-   - 宏观等式{eq}`consumer-saving-macro-equation`来说，居民的储蓄仅被用于资本的增量这一用途
+   - 微观等式 @eq-consumer-saving-micro-equation 来说，居民的储蓄被用于两方面：
+        - 资本的增量
+        - 股份的增量
+   - 宏观等式 @eq-consumer-saving-macro-equation 来说，居民的储蓄仅被用于资本的增量这一用途
    - 这种差异是因为企业所有权均由居民持有，假设居民宏观层面增加或减少持股数，则企业所有权市场显然处于未出清状态，所以居民在跨期中并未变动总持股量，所以这样就导致在宏观层面，居民的储蓄仅被用于了资本增量
 2. 注意区分微观变量与宏观变量
-   - 微观等式{eq}`consumer-saving-micro-equation`和宏观等式{eq}`consumer-saving-macro-equation`中 $d_1$ 的系数相对特殊，微观等式中为 $s_0$ 。而宏观等式中为 $1$ 。其实微观和宏观等式中系数即便相同，其含义也是不同的
+   - 微观等式 @eq-consumer-saving-micro-equation 和宏观等式 @eq-consumer-saving-macro-equation 中 $d_1$ 的系数相对特殊，微观等式中为 $s_0$ 。而宏观等式中为 $1$ 。其实微观和宏观等式中系数即便相同，其含义也是不同的
 
-````
+:::
 
 如{eq}`consumer-saving-macro-equation`，通过对企业预算约束等式进行变换，则可得到企业部门的储蓄表达式
 
@@ -684,9 +686,9 @@ $$
     - 消费在每一期的边际效用是逐步递减的，所以消费需要在各期尽量平滑分布
     - 通过储蓄，消费者可以在不同期之间转移消费，以实现消费的平滑分布
 
-```{note}
+::: {.callout-note}
 最优消费/储蓄的状态是指消费者在`消费的主观偏好`与`资本回报率`之间的平衡，也就是`消费者跨期效用比`与`资本回报率`之间的平衡。
-```
+:::
 
 ## 图形解释
 
@@ -715,9 +717,11 @@ TBD
     - 投资较多，资本回报率下降，消费者将要求企业增加分红，资本流向消费者
     - 投资较少，资本回报率较高时，消费者将追加投资
 
-```{hint}
+::: {.callout-tip}
+
 所以，实际上拉姆齐模型实际上隐含着萨伊定律的成立，这也意味着该模型情况下，经济增长的瓶颈在于供给面，而非需求面。
-```
+
+:::
 
 ## 中国消费和储蓄的基本事实
 
@@ -725,32 +729,32 @@ TBD
 
 ## 模型与中国经济的数量分析
 
-```{caution}
 TBD
-```
 
 ## 补充：多期模型的扩展
 
 ## 补充：理性预期
 
-```{caution}
 TBD
-```
 
 
 ## 课后练习
 
-:::{admonition} 问题
-:class: exercise
+::: {.callout-caution}
+
+### 问题1
 
 拉姆齐两期模型中，嘉定企业的生产函数为 $y=k^{0.5}$ （生产不需要劳动力），全社会在第1期期初的资本存量为1。在第1期期初全社会的总资本中，有一半属于居民，一半属于企业，并且企业所有权在居民手中
-1. 请画出模型的时序图并定义模型均衡
-2. 求解均衡时居民两期的消费量以及第2期的资本回报率
+
+1. 请画出模型的时序图
+2. 定义模型均衡
+3. 求解均衡时居民两期的消费量以及第2期的资本回报率
+
 :::
 
 
-```{code-cell} python
-:tags: [remove-input]
+``` {python}
+#| echo: false
 
 from plantuml import PlantUML
 from IPython.display import Image
@@ -786,18 +790,17 @@ end
 """
 
 puml = PlantUML('http://www.plantuml.com/plantuml/png/')
-glue('marco25-08-ramsy-model-exercise', Image(url=puml.get_url(uml)), display=False)
 ```
 
-:::::{admonition} 答案
-:class: solution dropdown
+::::: {.callout-tip collapse="true"}
 
-**第一题**
+:::: {.panel-tabset}
 
-```{glue:figure} marco25-08-ramsy-model-exercise
-:figwidth: 40%
-时序图
-```
+## 时序图
+
+![题1 时序图](`{python} puml.get_url(uml)`){.lightbox width=50%}
+
+## 第一题
 
 居民方面：
 
@@ -927,9 +930,8 @@ u'(c_1) &= \beta u'(c_2)[F'(k_1) + 1]
 \end{cases}
 $$
 
----
 
-**第二题**
+## 第二题
 
 我们将居民效用函数取为 CRRA 形式，即为
 
@@ -975,25 +977,7 @@ $$
 
 通过变换条件，将方程组变为 $k_1$ 的一元方程，通过以下python代码求解
 
-```python
-from scipy.optimize import root
-
-def func(x):
-    return (( (x**0.5 + x)/(x-2) )**2 - 0.98 * (0.5 * (x**-0.5) + 1))**2
-
-sol = root(func, 1)
-k = sol.x
-c1 = 2 - k
-c2 = k**0.5 + k
-r2 = 0.5 * (k**-0.5)
-```
-
-通过代码求解，可解得一期消费$c_1$为{glue:text}`marco25-08-01-c1:.4f`，二期消费$c_2$为{glue:text}`marco25-08-01-c2:.4f`，一期期末总资本$k_1$为{glue:text}`marco25-08-01-k1:.4f`。二期资本收益率$r_2$为{glue:text}`marco25-08-01-r2:.2%`
-
-:::::
-
-```{code-cell} python
-:tags: [remove-cell]
+```{python}
 from scipy.optimize import root
 
 def func(x):
@@ -1004,33 +988,35 @@ k = sol.x[0]
 c1 = 2 - k
 c2 = k**0.5 + k
 r2 = 0.5 * (k**-0.5)
-
-glue("marco25-08-01-c1", c1)
-glue("marco25-08-01-c2", c2)
-glue("marco25-08-01-k1", k)
-glue("marco25-08-01-r2", r2)
 ```
 
-:::{admonition} 问题
-:class: exercise
+通过代码求解，可解得一期消费$c_1$为`{python} f"{c1:.4f}"`，二期消费$c_2$为`{python} f"{c2:.4f}"`，
+一期期末总资本$k_1$为`{python} f"{k:.4f}"`。二期资本收益率$r_2$为`{python} f"{r2:.2%}"`
+
+::::
+
+:::::
+
+
+:::{.callout-caution}
 
 以下几个小问题可以帮助大家熟悉储蓄的概念
+
 1. 海解释以下几个概念：国民总储蓄、居民储蓄、企业储蓄、政府储蓄
 2. 请列举出以上几个概念在真实世界中的具体表现北式（无须穷尽，指出几个例子即可。如，居民的银行存款是居民储蓄的一种表现形式）
 3. 请查找最近一年的宏观统计数据，计算以上几个概念对应的指标占中国当年 GDP 的比重。（提示：在中国国家统计局每年发布的中国资金流量表（实物部分）中可以找到这些数据）
 4. 请计算不包含中国的全球经济储蓄率（国民总储蓄占 GDP 的比重），并将其与中国的储蓄率做对比。从中你能得到什么样的启示？[提示：在国际货币基金组织（IMF)的国际经济展望数据库 (World Economic Outlook Database）中可以查到相关数据]
+
 :::
 
-:::{admonition} 问题
-:class: exercise
+::: {.callout-caution}
 
 你认为萨伊定律在中国成立吗？请论述你的论点、逻辑和证据。
+
 :::
 
-:::{admonition} 答案
-:class: answer dropdown
+::: {.callout-tip}
 
 结论是萨伊定律在中国不能成立。
-
 
 :::

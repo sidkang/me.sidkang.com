@@ -54,7 +54,9 @@ website:
 
 format:
   html:
-    theme: litera
+    # theme: guartz
+    theme: pulse
+    # theme: litera
     css: styles.css
     toc: true
     toc-location: right
