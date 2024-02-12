@@ -1,5 +1,6 @@
 ---
 title: "Cooking"
+listing: defaults
 ---
 
 This is the cooking section index page.

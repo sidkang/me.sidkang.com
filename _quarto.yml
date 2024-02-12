@@ -51,6 +51,10 @@ website:
     right:
       - icon: github
         href: https://github.com/sidkang
+      - icon: twitter
+        href: https://twitter.com/sidskang
+      - icon: telegram
+        href: https://t.me/sidkang
 
 format:
   html:
