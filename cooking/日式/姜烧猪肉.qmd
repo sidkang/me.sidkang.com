@@ -1,5 +1,7 @@
 ---
 title: "姜烧猪肉"
+meta:
+  fav: true
 ---
 
 
