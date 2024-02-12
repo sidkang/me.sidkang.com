@@ -11,6 +11,7 @@ website:
   title: "SID's"
   site-url: https://me.sidkang.com
   description: "A simple pseronal blog"
+  favicon: images/profile.jpeg
   navbar:
     # background: primary
     search: true
