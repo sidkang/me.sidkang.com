@@ -33,9 +33,17 @@ website:
         - auto: notes
 
     - title: "Journals"
-      collapse-level: 3
+      collapse-level: 2
       contents:
-        - auto: journals
+        - section: "Journals"
+          href: journals/index.qmd
+          contents:
+            - section: "2024"
+              contents:
+                - journals/2024/weekly.qmd
+                - section: "February"
+                  contents:
+                    - auto: journals/2024/02/*
 
     - title: "Workouts"
       # style: "docked"
@@ -50,8 +58,6 @@ website:
     border: false
     left: "This page is built with ❤️  and [Quarto](https://quarto.org/)."
     right:
-      - icon: github
-        href: https://github.com/sidkang
       - icon: twitter
         href: https://twitter.com/sidskang
       - icon: telegram
@@ -59,9 +65,11 @@ website:
 
 format:
   html:
-    # theme: guartz
-    theme: pulse
-    # theme: litera
+    theme: 
+      # - pulse
+      # - guartz
+      - litera
+      - custom.scss
     css: styles.css
     toc: true
     toc-location: right

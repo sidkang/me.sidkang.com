@@ -1,0 +1,12 @@
+---
+title: "2024-02-13"
+date: 2024-02-13
+---
+
+## Workout
+
+{{< include 2024-02-13-workout.qmd >}}
+
+## Cooking
+
+{{< include 2024-02-13-cooking.qmd >}}

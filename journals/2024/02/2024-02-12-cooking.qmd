@@ -14,12 +14,12 @@
 过于简单，就不赘述了。
 :::
 
-![控肉饭 加料完成，准备开煮](/journals/2024/02/images/2024-02-12-cooking-240212-122110.png){.lightbox}
+![控肉饭 加料完成，准备开煮](/journals/2024/02/images/2024-02-12-cooking-240212-122110.png){.lightbox width=70%}
 ::::
 
 :::: {layout=[1,1]}
 
-![控肉饭 就还挺红烧肉的](/journals/2024/02/images/2024-02-12-cooking-240212-122010.png){.lightbox}
+![控肉饭 就还挺红烧肉的](/journals/2024/02/images/2024-02-12-cooking-240212-122010.png){.lightbox width=60%}
 
 ::: {.callout-tip}
 1. 红葱头下次得用正版的试试，这次用了家里种的，根本几乎就没长个，而且放的还少，拿了半个洋葱替代，严重怀疑这条拖后腿
