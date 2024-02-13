@@ -38,7 +38,7 @@ website:
         - section: "Journals"
           href: journals/index.qmd
           contents:
-            - section: "2024"
+            - section: "Y2024"
               contents:
                 - journals/2024/weekly.qmd
                 - section: "February"
