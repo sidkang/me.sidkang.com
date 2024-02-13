@@ -1,1 +1,19 @@
-empty
+---
+date: 2024-02-13
+---
+
+**Time**: 14:50~17:00
+
+在春节假期连续几天吃的比较多的情况下，训练真的是轻松非常多，应该是近几个月训练量最全的一次，除了没游泳，不然按照做了dip再shoulder press的情况，估计最后一组只能举3次，不过爽一次就行，明天继续开始规范饮食
+
+| Set | Exercise | Sets & Reps | Notes
+| - | - | - | -
+| Pull-up | Active Arch Hangs | 4s * 6 * 2<br>5s * 5 * 1 | 向着 10s * 5 * 3 努力
+| Dip | Dip Combinations | (5 dips + 3 4s negative dips) * 2 <br> (7 dips + 1 5s negative dips) * 1 | 刚做完的时候锁骨依旧挺痛的
+| Squat | High Bar Squat | 20 * 6<br>40 * 5<br>60 * 3<br>80 * 5 * 3 | 感觉似乎还挺轻松
+| Shoulder Press | Shoulder Press | 20 * 6<br>30 * 5<br>35 * 5 * 3 | 做的还挺吃力，应该是先做了dip的缘故
+| Push-up | Deep Push-up | 10cm * 7 * 3 | 换成深一些的俯卧撑，垫了两个杠铃片，确实比普通版累不少，应该还能再加一片
+| Row | Row | 8 * 3 | 用了Smith机做的，大概地面上5格的位置吧，最后一点高度上不去，胸部碰不到bar，可能要查一下是不是应该碰到才行
+| Deadlift | Deadlift | 50 * 6<br>70 * 5<br>80 * 3<br>90 * 5 * 3 | 突破PR，还挺爽，不算太吃力，有点怪，应该背部臀部有些感觉才是，明天再感受下
+
+: { .striped tbl-colwidths="[15, 20, 25, 40]" }

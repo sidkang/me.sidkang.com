@@ -3,5 +3,4 @@ title: "Cooking"
 listing: defaults
 ---
 
-This is the cooking section index page.
-
+写这个页面其实很简单，就是希望能积累一些菜谱，毕竟平时不常做菜，不记录的话，谱到用时方恨少啊
