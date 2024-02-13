@@ -3,10 +3,6 @@ title: "SID"
 about:
   template: jolla
   image: images/profile_2.jpeg
-  links:
-    - icon: telegram
-      text: telegram
-      href: https://t.me/sidkang
 ---
 
 [生知安行]{.fs-3}[不可求]{.fs-3}
