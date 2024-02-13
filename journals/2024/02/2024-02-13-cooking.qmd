@@ -16,7 +16,7 @@
 5. 下次加上点魔芋丝，这次没存货
 
 :::: {layout-ncol=2}
-![马铃薯炖肉 出锅前](/journals/2024/02/images/2024-02-13-cooking-240213-123042.png)
+![马铃薯炖肉 出锅前](/journals/2024/02/images/2024-02-13-cooking-240213-123042.png){.lightbox}
 
-![马铃薯炖肉 论滤镜的重要性，比我肉眼还好看些](/journals/2024/02/images/2024-02-13-cooking-240213-123139.png)
+![马铃薯炖肉 论滤镜的重要性，比我肉眼还好看些](/journals/2024/02/images/2024-02-13-cooking-240213-123139.png){.lightbox}
 ::::
