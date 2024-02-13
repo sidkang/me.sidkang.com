@@ -14,9 +14,9 @@ _site/
 site/
 _build/
 .quarto/
+/.quarto/
 
 # Others
 
-/.quarto/
 
 /_*.local
