@@ -1,0 +1,17 @@
+---
+date: 2024-02-15
+---
+
+**Time**: 15:35~17:25
+
+最后deadlift的bar上有凸出的滚花，抓的手真是疼死，靠
+
+| Set | Exercise | Sets & Reps | Notes
+| - | - | - | -
+| Pull-up | Active Arch Hangs | 5s * 6 * 2<br>5s * 5 * 1 |
+| Dip | Dip Combinations | (5 dips + 3 4s negative dips) * 2 <br> 8 dips * 1 | 仔细感受了下，锁骨其实会痛挺久的，大概一两分钟
+| Push-up | Deep Push-up | 15cm * 10 * 1<br>15cm * 8 * 1<br>15cm * 7 * 1 | 三个杠铃片
+| Row | Row | 8 * 3 | 无感，依旧吃力
+| Deadlift | Deadlift | 60 * 4<br>70 * 3<br>80 * 2<br>90 * 5 * 3 | 手实在有点痛，怕了
+
+: { .striped tbl-colwidths="[15, 20, 25, 40]" }

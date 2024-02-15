@@ -1,3 +1,11 @@
 ---
 title: "2024"
 ---
+
+
+| Week | Mon | Tue | Wed | Thu | Fri | Sat | Sun | Weekly |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 08 (02/12~02/18) | | | | [{{< fa book >}}]{.text-white} [[{{< fa utensils >}}]{.text-success}](02/2024-02-15.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-15.qmd#workout)
+| 09 (02/19~02/25) |
+
+: {.column-page-right}
