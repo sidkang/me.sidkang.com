@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SID’s</title>
+<title>SID’s - 消费与储蓄的决定</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -236,7 +236,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#储蓄的基本概念" id="toc-储蓄的基本概念" class="nav-link active" data-scroll-target="#储蓄的基本概念">储蓄的基本概念</a></li>
+  <li><a href="#消费与储蓄的决定" id="toc-消费与储蓄的决定" class="nav-link active" data-scroll-target="#消费与储蓄的决定">消费与储蓄的决定</a>
+  <ul class="collapse">
+  <li><a href="#储蓄的基本概念" id="toc-储蓄的基本概念" class="nav-link" data-scroll-target="#储蓄的基本概念">储蓄的基本概念</a></li>
   <li><a href="#拉姆齐模型仅居民积累资本" id="toc-拉姆齐模型仅居民积累资本" class="nav-link" data-scroll-target="#拉姆齐模型仅居民积累资本">拉姆齐模型(仅居民积累资本)</a>
   <ul class="collapse">
   <li><a href="#模型基础设定" id="toc-模型基础设定" class="nav-link" data-scroll-target="#模型基础设定">模型基础设定</a></li>
@@ -280,6 +282,7 @@ window.Quarto = {
   <li><a href="#补充多期模型的扩展" id="toc-补充多期模型的扩展" class="nav-link" data-scroll-target="#补充多期模型的扩展">补充：多期模型的扩展</a></li>
   <li><a href="#补充理性预期" id="toc-补充理性预期" class="nav-link" data-scroll-target="#补充理性预期">补充：理性预期</a></li>
   <li><a href="#课后练习" id="toc-课后练习" class="nav-link" data-scroll-target="#课后练习">课后练习</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -305,6 +308,8 @@ window.Quarto = {
 </header>
 
 
+<section id="消费与储蓄的决定" class="level1 page-columns page-full">
+<h1>消费与储蓄的决定</h1>
 <p>对应书本第7、8讲</p>
 <section id="储蓄的基本概念" class="level2">
 <h2 class="anchored" data-anchor-id="储蓄的基本概念">储蓄的基本概念</h2>
@@ -1106,7 +1111,7 @@ c_2 &amp; = k_1^{0.5} + k_1 \\
 \end{cases}
 \]</span></p>
 <p>通过变换条件，将方程组变为 <span class="math inline">\(k_1\)</span> 的一元方程，通过以下python代码求解</p>
-<div id="6d2acdfe" class="cell" data-execution_count="5">
+<div id="9f69417d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> root</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
@@ -1178,6 +1183,7 @@ Tip
 <span class="glightbox-desc lightbox-desc-3">拉姆齐模型 同时积累资本</span>
 <span class="glightbox-desc lightbox-desc-4">题1 时序图</span>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1595,7 +1601,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
