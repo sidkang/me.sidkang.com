@@ -16,7 +16,6 @@ _build/
 .quarto/
 /.quarto/
 site_libs/
-!_extensions/*/*/*
 
 # Others
 
