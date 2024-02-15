@@ -19,5 +19,5 @@ site_libs/
 
 # Others
 
-*.html.tmp
+*.tmp
 /_*.local

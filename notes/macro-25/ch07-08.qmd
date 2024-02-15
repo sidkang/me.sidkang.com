@@ -1,16 +1,6 @@
 ---
-jupytext:
-  cell_metadata_filter: -all
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.13.8
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
+title: "消费与储蓄的决定"
+jupyter: python3
 ---
 
 # 消费与储蓄的决定
@@ -212,7 +202,6 @@ $$
 
 from plantuml import PlantUML
 from IPython.display import Image
-from myst_nb import glue
 
 uml = """
 @startuml
@@ -244,7 +233,7 @@ end
 """
 
 puml = PlantUML('http://www.plantuml.com/plantuml/png/')
-glue('ramsy-model-only-firm', Image(url=puml.get_url(uml)), display=False)
+# glue('ramsy-model-only-firm', Image(url=puml.get_url(uml)), display=False)
 ```
 
 ### 模型设定
@@ -408,7 +397,6 @@ $$
 
 from plantuml import PlantUML
 from IPython.display import Image
-from myst_nb import glue
 
 uml = """
 @startuml
@@ -758,7 +746,6 @@ TBD
 
 from plantuml import PlantUML
 from IPython.display import Image
-from myst_nb import glue
 
 uml = """
 @startuml
