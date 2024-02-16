@@ -2,6 +2,17 @@
 title: "2024"
 ---
 
+## Calendar
+
+| Week | Mon | Tue | Wed | Thu | Fri | Sat | Sun | Weekly |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| W08 (02/12~02/18) | | | | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-15.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-15.qmd#workout) | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-16.qmd#cooking) [{{< fa dumbbell >}}]{.text-muted}
+| W09 (02/19~02/25) |
+| W10 (02/26~03/03) |
+
+: {.column-page-right}
+
+
 ## My 2024 Goals
 
 ### Work
@@ -28,13 +39,3 @@ title: "2024"
 
 
 
-
-## Calendar
-
-| Week | Mon | Tue | Wed | Thu | Fri | Sat | Sun | Weekly |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| W08 (02/12~02/18) | | | | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-15.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-15.qmd#workout) | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-16.qmd#cooking) [{{< fa dumbbell >}}]{.text-muted}
-| W09 (02/19~02/25) |
-| W10 (02/26~03/03) |
-
-: {.column-page-right}
