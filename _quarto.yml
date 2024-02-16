@@ -26,6 +26,13 @@ website:
         href: workouts/index.qmd
       - text: Cooking
         href: cooking/index.qmd
+      - text: About
+        menu:
+          - text: My Gear List
+            href: about/gears.qmd
+          - text: Markdown Cheatsheet
+            href: about/markdown-cheatsheet.qmd
+
   sidebar:
     - title: "Notes"
       collapse-level: 3
@@ -67,13 +74,18 @@ website:
 format:
   html:
     theme: 
-      - pulse
-      # - guartz
+      # - cosmo
+      # - flatly
+      - journal
+      # - pulse
+      # - materia
       # - litera
       - custom.scss
     css: styles.css
     toc: true
     toc-location: right
+    html-math-method: katex
+    smooth-scroll: true
     grid:
       body-width: 1000px
 

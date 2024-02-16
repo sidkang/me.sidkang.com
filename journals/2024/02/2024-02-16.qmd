@@ -1,0 +1,8 @@
+---
+title: "2024-02-16"
+date: 2024-02-16
+---
+
+## Cooking
+
+{{< include 2024-02-16-cooking.qmd >}}

@@ -15,7 +15,8 @@ title: "西班牙海鲜饭"
 
 ## 詹姆士
 
-{{< video https://youtu.be/EnPyi1ACKH8 >}}
+{{< video https://www.youtube.com/watch?v=SgxS5QFGgAg >}}
 
-## 做饭记录
+## 做饭记录 2024-02-16
 
+{{< include /journals/2024/02/2024-02-16-cooking.qmd >}}

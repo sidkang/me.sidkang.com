@@ -2,10 +2,39 @@
 title: "2024"
 ---
 
+## My 2024 Goals
+
+### Work
+
+#### AI
+
+#### Rust & Algorithms
+
+#### Maybe Product Manager Stuff Related?
+
+### Study
+
+#### Invest
+
+#### Japanese
+
+### Workout
+
+### Life
+
+#### Cooking
+
+#### Mental
+
+
+
+
+## Calendar
 
 | Week | Mon | Tue | Wed | Thu | Fri | Sat | Sun | Weekly |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| 08 (02/12~02/18) | | | | [{{< fa book >}}]{.text-white} [[{{< fa utensils >}}]{.text-success}](02/2024-02-15.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-15.qmd#workout)
-| 09 (02/19~02/25) |
+| W08 (02/12~02/18) | | | | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-15.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-15.qmd#workout) | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-16.qmd#cooking) [{{< fa dumbbell >}}]{.text-muted}
+| W09 (02/19~02/25) |
+| W10 (02/26~03/03) |
 
 : {.column-page-right}
