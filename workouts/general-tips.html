@@ -67,6 +67,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -109,6 +110,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../cooking/index.html"> 
 <span class="menu-text">Cooking</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/gears.html">
+ <span class="dropdown-text">My Gear List</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/markdown-cheatsheet.html">
+ <span class="dropdown-text">Markdown Cheatsheet</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -151,6 +167,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../workouts/general-tips.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">General Tips</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workouts/workout-plan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">我的训练计划</span></a>
   </div>
 </li>
       </ul>
@@ -646,4 +668,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

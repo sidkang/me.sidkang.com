@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -112,6 +113,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../../cooking/index.html" aria-current="page"> 
 <span class="menu-text">Cooking</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../about/gears.html">
+ <span class="dropdown-text">My Gear List</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/markdown-cheatsheet.html">
+ <span class="dropdown-text">Markdown Cheatsheet</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -203,6 +219,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../cooking/日式/姜烧猪肉.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">姜烧猪肉</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cooking/日式/嫩煮蒜辣鸡腿肉.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">嫩煮蒜辣鸡腿肉</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -745,7 +767,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
@@ -774,4 +796,5 @@ window.onload = () => {
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

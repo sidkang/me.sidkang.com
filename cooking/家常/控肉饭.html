@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -112,6 +113,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../../cooking/index.html" aria-current="page"> 
 <span class="menu-text">Cooking</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../about/gears.html">
+ <span class="dropdown-text">My Gear List</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../about/markdown-cheatsheet.html">
+ <span class="dropdown-text">Markdown Cheatsheet</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -203,6 +219,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../cooking/日式/姜烧猪肉.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">姜烧猪肉</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../cooking/日式/嫩煮蒜辣鸡腿肉.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">嫩煮蒜辣鸡腿肉</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -312,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../journals/2024/02/images/2024-02-12-cooking-240212-122110.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="控肉饭 加料完成，准备开煮"><img src="../../journals/2024/02/images/2024-02-12-cooking-240212-122110.png" class="img-fluid figure-img" style="width:70.0%" alt="控肉饭 加料完成，准备开煮"></a></p>
+<p><a href="../../journals/2024/02/images/2024-02-12-cooking-240212-122110.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="控肉饭 加料完成，准备开煮"><img src="../../journals/2024/02/images/2024-02-12-cooking-240212-122110.png" class="img-fluid figure-img" style="width:70.0%" alt="控肉饭 加料完成，准备开煮"></a></p>
 <figcaption>控肉饭 加料完成，准备开煮</figcaption>
 </figure>
 </div>
@@ -327,7 +349,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../journals/2024/02/images/2024-02-12-cooking-240212-122010.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="控肉饭 就还挺红烧肉的"><img src="../../journals/2024/02/images/2024-02-12-cooking-240212-122010.png" class="img-fluid figure-img" style="width:60.0%" alt="控肉饭 就还挺红烧肉的"></a></p>
+<p><a href="../../journals/2024/02/images/2024-02-12-cooking-240212-122010.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="控肉饭 就还挺红烧肉的"><img src="../../journals/2024/02/images/2024-02-12-cooking-240212-122010.png" class="img-fluid figure-img" style="width:60.0%" alt="控肉饭 就还挺红烧肉的"></a></p>
 <figcaption>控肉饭 就还挺红烧肉的</figcaption>
 </figure>
 </div>
@@ -778,7 +800,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
@@ -807,4 +829,5 @@ window.onload = () => {
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

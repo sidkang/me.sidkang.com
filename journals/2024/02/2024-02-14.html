@@ -71,6 +71,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -113,6 +114,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../../cooking/index.html"> 
 <span class="menu-text">Cooking</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../../../about/gears.html">
+ <span class="dropdown-text">My Gear List</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about/markdown-cheatsheet.html">
+ <span class="dropdown-text">Markdown Cheatsheet</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -205,6 +221,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">2024-02-15</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../journals/2024/02/2024-02-16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2024-02-16</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -268,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../journals/2024/02/images/2024-02-14-240214-100035.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="一期一会"><img src="../../../journals/2024/02/images/2024-02-14-240214-100035.png" class="img-fluid figure-img" alt="一期一会"></a></p>
+<p><a href="../../../journals/2024/02/images/2024-02-14-240214-100035.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="一期一会"><img src="../../../journals/2024/02/images/2024-02-14-240214-100035.png" class="img-fluid figure-img" alt="一期一会"></a></p>
 <figcaption>一期一会</figcaption>
 </figure>
 </div>
@@ -697,7 +719,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
@@ -726,4 +748,5 @@ window.onload = () => {
 
 
 
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
