@@ -7,6 +7,21 @@ title: "General Tips"
 1. Perfect Form
 2. Tempo: 10X0
 
+## Perfect dip while being pain-free
+
+收紧肩胛骨，不能含胸，或是耸肩
+
+![Scapular Retraction](/workouts/images/general-tips-240217-193218.png)
+
+::: {.callout-note collapse="true"}
+## Some Video References
+
+{{< video https://youtu.be/vi1-BOcj3cQ >}}
+
+{{< video https://youtu.be/7fWXAyn-sn0 >}}
+
+:::
+
 
 ## How to reduce injury rate
 
