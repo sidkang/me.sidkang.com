@@ -1,5 +1,22 @@
 /*-- scss:defaults --*/
-$purple: #593196 !default;
+
+// defaults
+// $blue: #eb6864 !default;
+$indigo: #6610f2 !default;
+// $purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #eb6864 !default;
+$orange: #fd7e14 !default;
+$yellow: #f5e625 !default;
+$green: #22b24c !default;
+$teal: #20c997 !default;
+$cyan: #369 !default;
+
+// custom
+$blue: #2780e3 !default;
+$purple: #6f42c1 !default;
+
 $primary: $purple;
-// $primary: #0074d9;
+$info: $blue;
+
 /*-- scss:rules --*/

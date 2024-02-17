@@ -22,6 +22,8 @@ website:
         href: notes/index.qmd
       - text: Journals
         href: journals/index.qmd
+      - text: Investing
+        href: investing/index.qmd
       - text: Workouts
         href: workouts/index.qmd
       - text: Cooking
@@ -52,6 +54,11 @@ website:
                 - section: "February"
                   contents:
                     - auto: journals/2024/02/*
+
+    - title: "Investing"
+      # style: "docked"
+      collapse-level: 3
+      contents: investing
 
     - title: "Workouts"
       # style: "docked"

@@ -1,0 +1,43 @@
+---
+title: "Markdown Cheatsheet"
+---
+
+## Layout
+
+``` markdown
+::: {layout-ncol=2}
+::: {layout-nrow=2}
+::: {layout="[[1,1], [1]]"}
+::: {layout="[[70,30], [100]]"}
+::: {layout="[[40,-20,40], [100]]"}  # use negative values to create space between elements
+::: {layout="[15,-2,10]" layout-valign="bottom"}
+```
+
+## Color
+
+``` markdown
+{.text-primary}
+{.text-secondary}
+{.text-success}
+{.text-danger}
+{.text-warning}
+{.text-info}
+{.text-muted}
+
+[red]{style="color:green;"}
+```
+
+## Text
+
+``` markdown
+{.fs-1} {.fs-6}  # font size
+{.fw-bold} {.fst-italic}  # weight & italics
+{.text-decoration-underline}
+{.text-decoration-line-through}
+```
+
+## Table
+``` markdown
+{.striped}
+{.light}
+```

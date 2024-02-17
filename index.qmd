@@ -5,10 +5,10 @@ about:
   image: images/profile_2.jpeg
 ---
 
-[生知安行]{.fs-3}[不可求]{.fs-3}
+[生知安行]{.fs-3}[不可求]{.fs-3 .text-white}
 
-[学知利行]{.fs-3}[或可得]{.fs-3}
+[或可得]{.fs-3 .text-white}[学知利行]{.fs-3}
 
-[困知勉行]{.fs-3 .text-success .fw-bold .text-decoration-underline}[亦可也]{.fs-3}
+[困知勉行]{.fs-3 .text-success .fw-bold .text-decoration-underline}[很好了]{.fs-3 .text-white}
 
 ---

@@ -6,7 +6,7 @@ title: "2024"
 
 | Week | Mon | Tue | Wed | Thu | Fri | Sat | Sun | Weekly |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| W08 (02/12~02/18) | | | | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-15.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-15.qmd#workout) | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-16.qmd#cooking) [{{< fa dumbbell >}}]{.text-muted}
+| W08 (02/12~02/18) | | | | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-15.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-15.qmd#workout) | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-16.qmd#cooking) [{{< fa dumbbell >}}]{.text-muted} | [{{< fa book >}}]{.text-muted} [[{{< fa utensils >}}]{.text-success}](02/2024-02-17.qmd#cooking) [[{{< fa dumbbell >}}]{.text-info}](02/2024-02-17.qmd#workout) |
 | W09 (02/19~02/25) |
 | W10 (02/26~03/03) |
 
@@ -30,6 +30,24 @@ title: "2024"
 #### Japanese
 
 ### Workout
+
+#### 1. 不受伤
+
+#### 2. 体脂率在06/30达到20%以下，12/31时达到16%以下
+
+#### 3. 骨密度持续提升
+
+#### 4. 体重保持在73kg+/-2kg内
+
+#### 5. 深蹲硬拉成绩分别在年中达到90kg和100kg
+
+#### 6. 实力推达到40kg以上
+
+#### 7. 06/30前初步能自由泳配合游
+
+#### 8. 06/30前自由泳打腿25米进入到35s内，50米进入到80s内
+
+#### 9. 引体向上可以一次做10+个
 
 ### Life
 

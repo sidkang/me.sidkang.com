@@ -1,0 +1,43 @@
+---
+title: "Rust Learning"
+---
+
+### Some Important Concepts
+
+1. Strings
+2. Lifetime
+
+#### Some small Tips for the early period
+
+1. Do not use references
+2. Copy and clone everything
+3. Follow the compiler
+
+## Materials
+
+### Books in order
+
+- [The Rust Book](https://doc.rust-lang.org/book/) by Rust Official Team
+- [Programming Rust, 2nd](https://www.amazon.com/Programming-Rust-Fast-Systems-Development/dp/1492052590/) by Jim Blandy
+- [Rust in Action](https://www.manning.com/books/rust-in-action) by Tim McNamara
+- [Comprehensive Rust](https://google.github.io/comprehensive-rust/) by Google
+- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
+- [Rust for Rustaceans](https://rust-for-rustaceans.com/) by Jon Gjengset
+
+### YouTube Channels
+
+- [Tim McNamara](https://www.youtube.com/@timclicks)
+- [Jon gjengset](https://www.youtube.com/@JonGjengset)
+- [NoBoilerPlate](https://www.youtube.com/@NoBoilerplate)
+- [Trevor Sullivan](https://www.youtube.com/@TrevorSullivan)
+
+### Exercises
+
+- [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
+- [Rust from Exercism](https://exercism.org/tracks/rust)
+- [Shuttle Launchpad](https://www.shuttle.rs/launchpad/issues)
+
+### Some Blog Sharings
+
+- [Path to become a rustacean](https://thedataquarry.com/posts/path-to-becoming-a-rustacean/)
+- [Faster Than Lime](https://fasterthanli.me/) by Amos
