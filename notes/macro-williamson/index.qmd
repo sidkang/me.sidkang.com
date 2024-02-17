@@ -1,0 +1,9 @@
+---
+title: "宏观经济学-威廉森"
+---
+
+::: {layout="[30,70]"}
+
+![Macroeconomics - Williamson 6th](/notes/macro-williamson/images/index-240217-160803.png){.lightbox}
+
+:::
