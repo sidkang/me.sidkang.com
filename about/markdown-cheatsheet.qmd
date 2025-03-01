@@ -1,5 +1,16 @@
 ---
 title: "Markdown Cheatsheet"
+jupyter: python3
+include-before-body:
+  text: |
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      });
+    </script>
 ---
 
 ## Layout
@@ -40,4 +51,117 @@ title: "Markdown Cheatsheet"
 ``` markdown
 {.striped}
 {.light}
+```
+
+## Popover
+
+<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+</span>
+
+[REF](https://getbootstrap.com/docs/5.2/components/popovers/#examples)
+
+## Alert
+
+
+[A simple primary alert—check it out!]{.alert .alert-primary role="alert"}
+
+[A simple primary alert—check it out!]{.alert .alert-success role="alert"}
+
+[A simple primary alert—check it out!]{.alert .alert-warning role="alert"}
+
+[A simple primary alert—check it out!]{.alert .alert-light role="alert"}
+
+[A simple primary alert—check it out!]{.alert .alert-info role="alert"}
+
+## Other
+
+::: {.border .text-center}
+This content can be styled with a border
+
+This content can be styled with a border
+
+This content can be styled with a border
+:::
+
+[Take the quiz!](quiz.qmd){.btn .btn-outline-primary .btn role="button" data-toggle="tooltip" title="Here's a tooltip"}
+
+
+``` html
+<div class="border">
+  <p>This content can be styled with a border</p>
+</div>
+```
+
+::::: {#special .sidebar}
+
+::: {.warning}
+Here is a warning.
+:::
+
+More content.
+:::::
+
+## Table with tooltips
+
+```
+include-before-body:
+  text: |
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      });
+    </script>
+```
+
+``` {python}
+#| output: asis
+#| echo: true
+
+import pandas as pd
+from IPython.display import HTML
+
+# this is a trick
+#| html-table-processing: none
+
+# Example DataFrame
+data = {
+    'A': ['Item 1', 'Item 2', 'Item 3'],
+    'B': ['Tooltip 1', 'Tooltip 2', 'Tooltip 3'],
+}
+df = pd.DataFrame(data)
+
+data = {
+    'Item': [f'Item {i}' for i in range(1, 21)],
+    'Item2': [f'Item {i}' for i in range(1, 21)],
+    'Item3': [f'Item {i}' for i in range(1, 21)],
+    'Item4': [f'Item {i}' for i in range(1, 21)],
+    'Description': [f'Description&nbsp;for Item {i}' for i in range(1, 21)],
+    'Tooltip': [f'Tooltip information for<br> Item {i}' for i in range(1, 21)]
+}
+df = pd.DataFrame(data)
+
+# Use Styler to add tooltip spans directly into cell values
+def add_tooltip(value, tooltip):
+    return f'<span data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="{tooltip}">{value}</span>'
+
+# Assuming you want to add tooltips from 'B' to 'A'
+df['Item'] = df.apply(lambda row: add_tooltip(row['Item'], row['Tooltip']), axis=1)
+df['Item2'] = df.apply(lambda row: add_tooltip(row['Item2'], row['Tooltip']), axis=1)
+
+# Now convert to HTML
+html_with_tooltips = df.drop(columns=["Tooltip"]).style.set_table_attributes('class="table-striped table-success"').to_html()
+# html_with_tooltips = df.drop(columns=['B']).style.to_html()
+HTML(html_with_tooltips)
+```
+
+``` {python}
+data = {
+    'Column A': [f'<span style="float: left;">Left</span><span style="float: right;">Right</span><br><span style="float: right;">Right</span>', 'Another Entry']
+}
+df = pd.DataFrame(data)
+HTML(df.to_html(escape=False))
 ```

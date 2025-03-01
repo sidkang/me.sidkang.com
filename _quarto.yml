@@ -1,3 +1,4 @@
+---
 project:
   type: website
   preview:
@@ -6,7 +7,6 @@ project:
     - "*.qmd"
     - "!journals/**/*-cooking.qmd"
     - "!*-workout.qmd"
-
 website:
   title: "SID's"
   site-url: https://me.sidkang.com
@@ -34,13 +34,11 @@ website:
             href: about/gears.qmd
           - text: Markdown Cheatsheet
             href: about/markdown-cheatsheet.qmd
-
   sidebar:
     - title: "Notes"
       collapse-level: 3
       contents:
         - auto: notes
-
     - title: "Journals"
       collapse-level: 2
       contents:
@@ -54,21 +52,21 @@ website:
                 - section: "February"
                   contents:
                     - auto: journals/2024/02/*
-
+            - section: "2025"
+              href: journals/2025/index.qmd
+              contents:
+                - auto: journals/2025/*
     - title: "Investing"
       # style: "docked"
       collapse-level: 3
       contents: investing
-
     - title: "Workouts"
       # style: "docked"
       collapse-level: 3
       contents: workouts
-
     - title: "Cooking"
       collapse-level: 3
       contents: cooking
-
   page-footer:
     border: false
     left: "This page is built with ❤️  and [Quarto](https://quarto.org/)."
@@ -77,10 +75,9 @@ website:
         href: https://twitter.com/sidskang
       - icon: telegram
         href: https://t.me/sidkang
-
 format:
   html:
-    theme: 
+    theme:
       # - cosmo
       # - flatly
       - journal
@@ -95,4 +92,3 @@ format:
     smooth-scroll: true
     grid:
       body-width: 1000px
-

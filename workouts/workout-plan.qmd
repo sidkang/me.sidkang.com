@@ -1,5 +1,6 @@
 ---
 title: "我的训练计划"
+date: "2024-02-25"
 ---
 
 主要目标：
@@ -8,11 +9,59 @@ title: "我的训练计划"
 2. 运动能力、街健动作
 3. 身体健康
 
+## 训练目标
 
+1. 力量
+2. 增肌
+3. 减脂
+4. 技巧
 
-## 训练内容
+## 每周安排
+
+结合我每周工作五天、周末双休的日常，并且周末可能active水平较低
+
+| Weekyday | 力量 | 技巧 | 有氧 | 柔韧 |
+| - | - | - | - | - |
+| Mon | X | X | X | X |
+| Tue | | X | X | X |
+| Wed | X | X | | X |
+| Thu | | |
+| Fri | X | X | X | X |
+| Sat | | X | X | X |
+| Sun | | | | |
+
+1. 力量训练包含Freeweight, Calisthenics
+2. 技巧方面主要是Handstand, L-Sit
+3. 工作日有氧一般指游泳，周末一般就是步行
+4. 柔韧一般放在晚上做吧（准备）
+
+## Routine
+
+### Warm-up
+
+| Exercise | Reps | Link | Comment
+| - | - | - | -
+| Shoulder Band Warmup | 5-10 | [YouTube Link](https://www.youtube.com/watch?v=Vwn5hSf3WEg)
+| Squat Sky Reache | 5-10
+| GMB Wrist Prep | 10+
+| Deadbug | 30s
+| Arch Hang | 10
+| Support Hold 30s
+| Easier Squat
+| Easier Hinge
+
+### Skill
+
+| Exercise | Reps |
+| - | - |
+| Handstand |
+
 
 ### Strength & Muscle
+
+| Section | Exercise |
+| - | - |
+| pull-up | 
 
 #### Pull-ups
 
@@ -24,6 +73,16 @@ title: "我的训练计划"
 
 #### Deadlift
 
-### Skills
+### Skill
 
 #### Handstand
+
+#### L-Sit
+
+### Cardio
+
+#### 浮板打腿
+
+#### 走路
+
+### Mobility
