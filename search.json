@@ -15,7 +15,7 @@
     "href": "workouts/workout-plan.html#训练内容",
     "title": "我的训练计划",
     "section": "训练内容",
-    "text": "训练内容\n\nStrength & Muscle\n\nPull-ups\n\n\nBarbell Squats\n\n\nShoulder Press\n\n\nWeight Dips\n\n\nDeadlift\n\n\n\nSkills\n\nHandstand",
+    "text": "训练内容\n\nStrength & Muscle\n\nPull-ups\n\n\nBarbell Squats\n\n\nShoulder Press\n\n\nWeight Dips\n\n\nDeadlift\n\n\n\nSkill\n\nHandstand\n\n\nL-Sit\n\n\n\nCardio\n\n浮板打腿\n\n\n走路\n\n\n\nMobility",
     "crumbs": [
       "Workouts",
       "我的训练计划"
@@ -26,7 +26,7 @@
     "href": "workouts/handstand-progression.html",
     "title": "Handstand Progression",
     "section": "",
-    "text": "30~40s chest to wall, feet on the wall, straight line body\n\nhalf turn, fall on feet\n\n5~10s chest to wall with feet off the wall\n\ntoe tap or split feet\n\n10~20s feet off the wall, 60s feet on wall\n25% time kick ups & 75% 30~40s feet off the wall\n30~40s feet off wall -&gt; 50%~75% kick ups\nNever eliminate wall HS - 10~20% at lowest\n\n\n\n\nHands & forearms should be doing most of the work\nShoulders can burn but balance is all fingertips and palms\nHS is slightly overbalanced. Finger tip pulses to correct\nBody wobbles at shoulders, core, and hips make it harder\n\nVideo Reference Handstand Progression Chart",
+    "text": "30~40s chest to wall, feet on the wall, straight line body\n\nhalf turn, fall on feet\n\n5~10s chest to wall with feet off the wall\n\ntoe tap or split feet\n\n10~20s feet off the wall, 60s feet on wall\n25% time kick ups & 75% 30~40s feet off the wall\n30~40s feet off wall -&gt; 50%~75% kick ups\nNever eliminate wall HS - 10~20% at lowest\n\n\n\n\n\nHands & forearms should be doing most of the work\nShoulders can burn but balance is all fingertips and palms\nHS is slightly overbalanced. Finger tip pulses to correct\nBody wobbles at shoulders, core, and hips make it harder\n\nVideo Reference Handstand Progression Chart",
     "crumbs": [
       "Workouts",
       "Handstand Progression"
@@ -1149,6 +1149,350 @@
     "text": "This is the workout page.",
     "crumbs": [
       "Workouts"
+    ]
+  },
+  {
+    "objectID": "journals/2024/weekly.html",
+    "href": "journals/2024/weekly.html",
+    "title": "Weekly",
+    "section": "",
+    "text": "第一次尝试些周review，六天春节假期+周日调休上班，有点茫然不知道写啥，哈哈哈\n训练：\n\n教训啊，做dip搞得半夜没睡着，以后发现疼痛，真的要第一时间开始疑问是否动作做错了，不能想着可能是练对了",
+    "crumbs": [
+      "Journals",
+      "2024",
+      "Weekly"
+    ]
+  },
+  {
+    "objectID": "journals/2024/weekly.html#w08-0212-0218",
+    "href": "journals/2024/weekly.html#w08-0212-0218",
+    "title": "Weekly",
+    "section": "",
+    "text": "第一次尝试些周review，六天春节假期+周日调休上班，有点茫然不知道写啥，哈哈哈\n训练：\n\n教训啊，做dip搞得半夜没睡着，以后发现疼痛，真的要第一时间开始疑问是否动作做错了，不能想着可能是练对了",
+    "crumbs": [
+      "Journals",
+      "2024",
+      "Weekly"
+    ]
+  },
+  {
+    "objectID": "about/markdown-cheatsheet.html#popover",
+    "href": "about/markdown-cheatsheet.html#popover",
+    "title": "Markdown Cheatsheet",
+    "section": "Popover",
+    "text": "Popover\n Disabled button \nREF"
+  },
+  {
+    "objectID": "about/markdown-cheatsheet.html#alert",
+    "href": "about/markdown-cheatsheet.html#alert",
+    "title": "Markdown Cheatsheet",
+    "section": "Alert",
+    "text": "Alert\nA simple primary alert—check it out!\nA simple primary alert—check it out!\nA simple primary alert—check it out!\nA simple primary alert—check it out!\nA simple primary alert—check it out!"
+  },
+  {
+    "objectID": "about/markdown-cheatsheet.html#other",
+    "href": "about/markdown-cheatsheet.html#other",
+    "title": "Markdown Cheatsheet",
+    "section": "Other",
+    "text": "Other\n\nThis content can be styled with a border\nThis content can be styled with a border\nThis content can be styled with a border\n\nTake the quiz!\n&lt;div class=\"border\"&gt;\n  &lt;p&gt;This content can be styled with a border&lt;/p&gt;\n&lt;/div&gt;\n\n\nHere is a warning.\n\nMore content."
+  },
+  {
+    "objectID": "about/markdown-cheatsheet.html#table-with-tooltips",
+    "href": "about/markdown-cheatsheet.html#table-with-tooltips",
+    "title": "Markdown Cheatsheet",
+    "section": "Table with tooltips",
+    "text": "Table with tooltips\ninclude-before-body:\n  text: |\n    &lt;script&gt;\n      document.addEventListener(\"DOMContentLoaded\", function(){\n        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"tooltip\"]'));\n        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {\n          return new bootstrap.Tooltip(tooltipTriggerEl);\n        });\n      });\n    &lt;/script&gt;\nimport pandas as pd\nfrom IPython.display import HTML\n\n# this is a trick\n#| html-table-processing: none\n\n# Example DataFrame\ndata = {\n    'A': ['Item 1', 'Item 2', 'Item 3'],\n    'B': ['Tooltip 1', 'Tooltip 2', 'Tooltip 3'],\n}\ndf = pd.DataFrame(data)\n\ndata = {\n    'Item': [f'Item {i}' for i in range(1, 21)],\n    'Item2': [f'Item {i}' for i in range(1, 21)],\n    'Item3': [f'Item {i}' for i in range(1, 21)],\n    'Item4': [f'Item {i}' for i in range(1, 21)],\n    'Description': [f'Description&nbsp;for Item {i}' for i in range(1, 21)],\n    'Tooltip': [f'Tooltip information for&lt;br&gt; Item {i}' for i in range(1, 21)]\n}\ndf = pd.DataFrame(data)\n\n# Use Styler to add tooltip spans directly into cell values\ndef add_tooltip(value, tooltip):\n    return f'&lt;span data-bs-toggle=\"tooltip\" data-bs-html=\"true\" data-bs-title=\"{tooltip}\"&gt;{value}&lt;/span&gt;'\n\n# Assuming you want to add tooltips from 'B' to 'A'\ndf['Item'] = df.apply(lambda row: add_tooltip(row['Item'], row['Tooltip']), axis=1)\ndf['Item2'] = df.apply(lambda row: add_tooltip(row['Item2'], row['Tooltip']), axis=1)\n\n# Now convert to HTML\nhtml_with_tooltips = df.drop(columns=[\"Tooltip\"]).style.set_table_attributes('class=\"table-striped table-success\"').to_html()\n# html_with_tooltips = df.drop(columns=['B']).style.to_html()\nHTML(html_with_tooltips)\n\n\n\n\n\n\n \nItem\nItem2\nItem3\nItem4\nDescription\n\n\n\n\n0\nItem 1\nItem 1\nItem 1\nItem 1\nDescription for Item 1\n\n\n1\nItem 2\nItem 2\nItem 2\nItem 2\nDescription for Item 2\n\n\n2\nItem 3\nItem 3\nItem 3\nItem 3\nDescription for Item 3\n\n\n3\nItem 4\nItem 4\nItem 4\nItem 4\nDescription for Item 4\n\n\n4\nItem 5\nItem 5\nItem 5\nItem 5\nDescription for Item 5\n\n\n5\nItem 6\nItem 6\nItem 6\nItem 6\nDescription for Item 6\n\n\n6\nItem 7\nItem 7\nItem 7\nItem 7\nDescription for Item 7\n\n\n7\nItem 8\nItem 8\nItem 8\nItem 8\nDescription for Item 8\n\n\n8\nItem 9\nItem 9\nItem 9\nItem 9\nDescription for Item 9\n\n\n9\nItem 10\nItem 10\nItem 10\nItem 10\nDescription for Item 10\n\n\n10\nItem 11\nItem 11\nItem 11\nItem 11\nDescription for Item 11\n\n\n11\nItem 12\nItem 12\nItem 12\nItem 12\nDescription for Item 12\n\n\n12\nItem 13\nItem 13\nItem 13\nItem 13\nDescription for Item 13\n\n\n13\nItem 14\nItem 14\nItem 14\nItem 14\nDescription for Item 14\n\n\n14\nItem 15\nItem 15\nItem 15\nItem 15\nDescription for Item 15\n\n\n15\nItem 16\nItem 16\nItem 16\nItem 16\nDescription for Item 16\n\n\n16\nItem 17\nItem 17\nItem 17\nItem 17\nDescription for Item 17\n\n\n17\nItem 18\nItem 18\nItem 18\nItem 18\nDescription for Item 18\n\n\n18\nItem 19\nItem 19\nItem 19\nItem 19\nDescription for Item 19\n\n\n19\nItem 20\nItem 20\nItem 20\nItem 20\nDescription for Item 20\n\n\n\n\n\ndata = {\n    'Column A': [f'&lt;span style=\"float: left;\"&gt;Left&lt;/span&gt;&lt;span style=\"float: right;\"&gt;Right&lt;/span&gt;&lt;br&gt;&lt;span style=\"float: right;\"&gt;Right&lt;/span&gt;', 'Another Entry']\n}\ndf = pd.DataFrame(data)\nHTML(df.to_html(escape=False))\n\n\n\n\n\n\n\n\n\n\nColumn A\n\n\n\n\n0\nLeftRight\nRight\n\n\n1\nAnother Entry"
+  },
+  {
+    "objectID": "workouts/workout-plan.html#训练目标",
+    "href": "workouts/workout-plan.html#训练目标",
+    "title": "我的训练计划",
+    "section": "训练目标",
+    "text": "训练目标\n\n力量\n增肌\n减脂\n技巧",
+    "crumbs": [
+      "Workouts",
+      "我的训练计划"
+    ]
+  },
+  {
+    "objectID": "workouts/workout-plan.html#每周安排",
+    "href": "workouts/workout-plan.html#每周安排",
+    "title": "我的训练计划",
+    "section": "每周安排",
+    "text": "每周安排\n结合我每周工作五天、周末双休的日常，并且周末可能active水平较低\n\n\n\nWeekyday\n力量\n技巧\n有氧\n柔韧\n\n\n\n\nMon\nX\nX\nX\nX\n\n\nTue\n\nX\nX\nX\n\n\nWed\nX\nX\n\nX\n\n\nThu\n\n\n\n\n\n\nFri\nX\nX\nX\nX\n\n\nSat\n\nX\nX\nX\n\n\nSun\n\n\n\n\n\n\n\n\n力量训练包含Freeweight, Calisthenics\n技巧方面主要是Handstand, L-Sit\n工作日有氧一般指游泳，周末一般就是步行\n柔韧一般放在晚上做吧（准备）",
+    "crumbs": [
+      "Workouts",
+      "我的训练计划"
+    ]
+  },
+  {
+    "objectID": "workouts/workout-plan.html#routine",
+    "href": "workouts/workout-plan.html#routine",
+    "title": "我的训练计划",
+    "section": "Routine",
+    "text": "Routine\n\nWarm-up\n\n\n\nExercise\nReps\nLink\nComment\n\n\n\n\nShoulder Band Warmup\n5-10\nYouTube Link\n\n\n\nSquat Sky Reache\n5-10\n\n\n\n\nGMB Wrist Prep\n10+\n\n\n\n\nDeadbug\n30s\n\n\n\n\nArch Hang\n10\n\n\n\n\nSupport Hold 30s\n\n\n\n\n\nEasier Squat\n\n\n\n\n\nEasier Hinge\n\n\n\n\n\n\n\n\nSkill\n\n\n\nExercise\nReps\n\n\n\n\nHandstand\n\n\n\n\n\n\nStrength & Muscle\n\n\n\nSection\nExercise\n\n\n\n\npull-up\n\n\n\n\n\nPull-ups\n\n\nBarbell Squats\n\n\nShoulder Press\n\n\nWeight Dips\n\n\nDeadlift\n\n\n\nSkill\n\nHandstand\n\n\nL-Sit\n\n\n\nCardio\n\n浮板打腿\n\n\n走路\n\n\n\nMobility",
+    "crumbs": [
+      "Workouts",
+      "我的训练计划"
+    ]
+  },
+  {
+    "objectID": "workouts/handstand-progression.html#steven-low",
+    "href": "workouts/handstand-progression.html#steven-low",
+    "title": "Handstand Progression",
+    "section": "",
+    "text": "30~40s chest to wall, feet on the wall, straight line body\n\nhalf turn, fall on feet\n\n5~10s chest to wall with feet off the wall\n\ntoe tap or split feet\n\n10~20s feet off the wall, 60s feet on wall\n25% time kick ups & 75% 30~40s feet off the wall\n30~40s feet off wall -&gt; 50%~75% kick ups\nNever eliminate wall HS - 10~20% at lowest\n\n\n\n\n\nHands & forearms should be doing most of the work\nShoulders can burn but balance is all fingertips and palms\nHS is slightly overbalanced. Finger tip pulses to correct\nBody wobbles at shoulders, core, and hips make it harder\n\nVideo Reference Handstand Progression Chart",
+    "crumbs": [
+      "Workouts",
+      "Handstand Progression"
+    ]
+  },
+  {
+    "objectID": "workouts/handstand-progression.html#strength-side",
+    "href": "workouts/handstand-progression.html#strength-side",
+    "title": "Handstand Progression",
+    "section": "Strength Side",
+    "text": "Strength Side\nBeginner Intermediate\n\nKeys\n\nwrist flexibility & strength\n\nwrist and finger strength\n\n\n\n\nRoutine",
+    "crumbs": [
+      "Workouts",
+      "Handstand Progression"
+    ]
+  },
+  {
+    "objectID": "cooking/nutrition.html#蛋白质类肉蛋豆",
+    "href": "cooking/nutrition.html#蛋白质类肉蛋豆",
+    "title": "食材的选择",
+    "section": "蛋白质类（肉、蛋、豆）",
+    "text": "蛋白质类（肉、蛋、豆）",
+    "crumbs": [
+      "Cooking",
+      "食材的选择"
+    ]
+  },
+  {
+    "objectID": "cooking/nutrition.html#调味类",
+    "href": "cooking/nutrition.html#调味类",
+    "title": "食材的选择",
+    "section": "调味类",
+    "text": "调味类\n\n辣椒\n姜\n蒜",
+    "crumbs": [
+      "Cooking",
+      "食材的选择"
+    ]
+  },
+  {
+    "objectID": "cooking/nutrition.html#蔬菜",
+    "href": "cooking/nutrition.html#蔬菜",
+    "title": "食材的选择",
+    "section": "蔬菜",
+    "text": "蔬菜\n\n一般\n\n西葫芦\n胡萝卜\n罗马生菜\n羽衣甘蓝\n菠菜\n芥菜\n辣椒\n圆椒\n\n\n\n\n蔬菜类水果\n\n南瓜\n番茄\n西葫芦",
+    "crumbs": [
+      "Cooking",
+      "食材的选择"
+    ]
+  },
+  {
+    "objectID": "cooking/nutrition.html#碳水类",
+    "href": "cooking/nutrition.html#碳水类",
+    "title": "食材的选择",
+    "section": "碳水类",
+    "text": "碳水类\n\n红薯\n洋葱\n土豆",
+    "crumbs": [
+      "Cooking",
+      "食材的选择"
+    ]
+  },
+  {
+    "objectID": "cooking/nutrition.html#水果",
+    "href": "cooking/nutrition.html#水果",
+    "title": "食材的选择",
+    "section": "水果",
+    "text": "水果\n\n香蕉\n牛油果\n猕猴桃\n凤梨\n草莓\n番石榴 芭乐\n黑莓\n蓝莓\n石榴\n哈密瓜",
+    "crumbs": [
+      "Cooking",
+      "食材的选择"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html",
+    "href": "workouts/tennis.html",
+    "title": "Tennis",
+    "section": "",
+    "text": "球质\n旋转、速度、角度、\n延长击球时间：提高击球质量下限",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#some-random-tips",
+    "href": "workouts/tennis.html#some-random-tips",
+    "title": "Tennis",
+    "section": "",
+    "text": "主动选择击球点。打球的时候要先学会退，初学阶段要在球的下落期击球，不能盲目向前（这不是真正的主动击球），退后不意味就是被动击球。练习的时候，应该更多的练习下落期击球，在上升期少练，随着水平提高再逐渐调整",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#叶修的四力",
+    "href": "workouts/tennis.html#叶修的四力",
+    "title": "Tennis",
+    "section": "叶修的四力",
+    "text": "叶修的四力\n\n正手\n\n可以先肩后手，也可以先手后肩，重点是肩要稳定，不要让肩膀拖着手（拉扯肌肉）\n\n\n\n双反",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#叶修的四力框架",
+    "href": "workouts/tennis.html#叶修的四力框架",
+    "title": "Tennis",
+    "section": "叶修的四力框架",
+    "text": "叶修的四力框架\n\n四力\n底线+发球线的四种组合\n合格标准：最终的标准是过网高度有三个球左右，落点在单打线和双打线，发球线向双打线的延长线和网围的区域里\n一个重点参考正手 相对早期的视频 反手 早期\n\n\nSome Random Tips\n\n主动选择击球点。打球的时候要先学会退，初学阶段要在球的下落期击球，不能盲目向前（这不是真正的主动击球），退后不意味就是被动击球。练习的时候，应该更多的练习下落期击球，在上升期少练，随着水平提高再逐渐调整\n\n\n\n正手\n一个比较详细的版本 叶的正手视频\n\n可以先肩后手，也可以先手后肩，重点是肩要稳定，不要让肩膀拖着手（拉扯肌肉）\n\n\n\n直臂正手\n\n架拍高一点，拍头高于头，架起来就行\n\n\n\n双反\n\n\nQAs\n\n延长击球时间：提高击球质量下限\n打斜线：击球点、转肩一丢丢",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#kaure",
+    "href": "workouts/tennis.html#kaure",
+    "title": "Tennis",
+    "section": "Kaure",
+    "text": "Kaure",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#intuitive-tennis",
+    "href": "workouts/tennis.html#intuitive-tennis",
+    "title": "Tennis",
+    "section": "Intuitive Tennis",
+    "text": "Intuitive Tennis",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#四力的练习",
+    "href": "workouts/tennis.html#四力的练习",
+    "title": "Tennis",
+    "section": "四力的练习",
+    "text": "四力的练习\n底线&发球线到对面底线&发球线的四种组合\n\n合格标准\n最终的标准是过网高度有三个球左右，落点在单打线和双打线，发球线向双打线的延长线和网围的区域里\n\n\n正手四力",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#叶修四力四件套",
+    "href": "workouts/tennis.html#叶修四力四件套",
+    "title": "Tennis",
+    "section": "叶修四力四件套",
+    "text": "叶修四力四件套\n\n四力\n\n底线+发球线的四种组合\n\n四件套\n\n打完再转的练习方式？\n\n合格标准\n\n过网高度有三个球左右，落点在单打线和双打线之间，第一眺在发球线内或底线内，第二眺在对应线外\n\n\n\n\n一般正手\n\n握拍不影响，最好能够使用两种以上的握拍完成练习\n一阶段：不架拍，拍子在身侧，打球下方一些，动作慢一些\n二阶段：大臂抬起架拍，小臂内旋一些，不要绷直手臂\n\n打球后方，打实一些，不要蹭/擦（注意击球声音）\n打实后，拍在球上方离开\n\n三阶段：完整架拍，需要抛球或者抛球机\n\n加入架拍\n两个大臂可以抬起来，留出发力空间\n\n\n\n参考视频\n\n早期糙男版\n正手篇\n动作参考1-侧面视角\n动作参考2-背后视角\n八戒-重开****\nTwaistaTrip-四力\n其他参考\n\n\n\n\n\n\n\n\n\n\n一阶段：稍稍抬起\n\n\n\n\n\n\n\n二阶段：大臂抬起架拍\n\n\n\n\n\n\n\n三阶段：架拍\n\n\n\n\n\n\n\n\n\n\n\n常见问题\n\n\n\n\n\n\n大臂抬不够，没有打球下面\n\n碰球前先收小臂了,至少碰球后半秒你别收小臂\n\n别拉拍\n\n起始位置不对，真到打球你肯定是拉到那个位置\n\n拍头不要过左肩\n\n拍面击球后，手的行动轨迹应该只有向上了\n\n从身侧向身前推手\n可以用小臂，但是方向要与大臂抬的方向一致？？\n击球点的时候，如果想要击球点更加靠近球下方，需要能不抬肘\n区分是否出拍头\n\n视频参考\n通过收拍来确认\n\n\n\n\n\n\n\n\n直臂正手\n与一般正手的区别：不太能有支撑感，需要在出拍头的时候击球，拍面应该是与地面有一定角度的\n动作上应该更应该关注出拍头和屈肘的部分，另外转体会更加少\n\n一阶段\n架拍，掉一点手腕，向外，把力给出去，击球后停住，拍面应该朝下，指向球的方向\n\n\n\n\n\n\n\n\n\n架拍：稍稍扣一些手腕\n\n\n\n\n\n\n\n二阶段\n架拍\n\n架拍高一点，拍头高于头，架起来就行 避免在架拍的时候翻手腕，这样可以在击球时减少掰手腕的可能性\n\n\n\n\n\n\n\n\n\n\n架拍：拍面朝下、拍头高过高\n\n\n\n\n\n\n\n\n反手\n反手 早期\n\n\n脚下-四件套\nmogul step/stance\n\n2mintennis参考\n\n\n\n小臂内旋\n\n正手\n\n架拍：减少可能的奇怪问题\n击球：更多做出内旋延伸，而不是手腕雨刷\n练习：把球和动作区分开，动作首先昨完整\n\n演示视频\n手腕不支撑&手腕支撑的抽象版\n\n手腕篇：击球后向前向上延伸\n\n\n\n发球\n练的时候再补充\n\n\n\nSome Random Tips\n\n主动选择击球点。打球的时候要先学会退，初学阶段要在球的下落期击球，不能盲目向前（这不是真正的主动击球），退后不意味就是被动击球。练习的时候，应该更多的练习下落期击球，在上升期少练，随着水平提高再逐渐调整\n\n\n\n正手\n一个比较详细的版本 叶的正手视频\n\n可以先肩后手，也可以先手后肩，重点是肩要稳定，不要让肩膀拖着手（拉扯肌肉）\n\n\n\n双反\n\n\nQAs\n\n延长击球时间：提高击球质量下限\n打斜线：击球点、转肩一丢丢",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "workouts/tennis.html#karue",
+    "href": "workouts/tennis.html#karue",
+    "title": "Tennis",
+    "section": "Karue",
+    "text": "Karue",
+    "crumbs": [
+      "Workouts",
+      "Tennis"
+    ]
+  },
+  {
+    "objectID": "journals/2025/index.html",
+    "href": "journals/2025/index.html",
+    "title": "2025",
+    "section": "",
+    "text": "nothing yet.",
+    "crumbs": [
+      "Journals",
+      "2025"
+    ]
+  },
+  {
+    "objectID": "journals/2025/2025-W09.html",
+    "href": "journals/2025/2025-W09.html",
+    "title": "2025-W09",
+    "section": "",
+    "text": "群友评语\n\n甩肩膀（有感觉）\n速度太快 (略有猜到)\n用小臂多 （毫无知觉）\n甩 （可能是速度快的缘故）",
+    "crumbs": [
+      "Journals",
+      "2025",
+      "2025-W09"
+    ]
+  },
+  {
+    "objectID": "journals/2025/2025-W09.html#section",
+    "href": "journals/2025/2025-W09.html#section",
+    "title": "2025-W09",
+    "section": "",
+    "text": "群友评语\n\n甩肩膀（有感觉）\n速度太快 (略有猜到)\n用小臂多 （毫无知觉）\n甩 （可能是速度快的缘故）",
+    "crumbs": [
+      "Journals",
+      "2025",
+      "2025-W09"
+    ]
+  },
+  {
+    "objectID": "journals/2025/2025-W09.html#section-1",
+    "href": "journals/2025/2025-W09.html#section-1",
+    "title": "2025-W09",
+    "section": "2025-03-01",
+    "text": "2025-03-01",
+    "crumbs": [
+      "Journals",
+      "2025",
+      "2025-W09"
+    ]
+  },
+  {
+    "objectID": "journals/2025/2025-W09.html#section-2",
+    "href": "journals/2025/2025-W09.html#section-2",
+    "title": "2025-W09",
+    "section": "2025-03-02",
+    "text": "2025-03-02",
+    "crumbs": [
+      "Journals",
+      "2025",
+      "2025-W09"
+    ]
+  },
+  {
+    "objectID": "journals/2025/2025-W10.html",
+    "href": "journals/2025/2025-W10.html",
+    "title": "2025-W10",
+    "section": "",
+    "text": "TBD.",
+    "crumbs": [
+      "Journals",
+      "2025",
+      "2025-W10"
+    ]
+  },
+  {
+    "objectID": "journals/2025/2025-W10.html#section",
+    "href": "journals/2025/2025-W10.html#section",
+    "title": "2025-W10",
+    "section": "",
+    "text": "TBD.",
+    "crumbs": [
+      "Journals",
+      "2025",
+      "2025-W10"
     ]
   }
 ]
