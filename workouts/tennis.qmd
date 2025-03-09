@@ -75,7 +75,7 @@ title: "Tennis"
 
 与一般正手的区别
 
-- 不太能有支撑感，需要在出拍头的时候击球，
+- 相对而言，需要在出拍头的时候击球，支撑感会弱一些
 - 因为需要出拍头的时候击球，所以击球点相比一般正手更加靠前些[自行脑补补充]
 
 动作上应该更应该关注出拍头和屈肘的部分，另外转体会更加少
@@ -175,8 +175,55 @@ mogul step/stance
 
 ## Random Videos and Tips
 
+### [Karue-How to Level Up](https://www.youtube.com/watch?v=f07A4zLh5QU)
+
+- Ready Position
+    - Grip - Consistent
+    - Body
+        - Be on Your Toes
+- Split Step
+    - 1.2.Split
+- Know Your Grip
+    - Stick to a Grip
+
+    
+
 ### [如何进步快](https://www.bilibili.com/video/BV1MeXZYnEP7)
 
 - 擅长筛选信息，一定程度上固定教练
 - 记笔记，记住建议
+
+### 脚步
+
+- [应该学的](ttps://b23.tv/jtrg8p9)
+
+1. 垫步应该在对方触球时已经落地，间距最好比肩宽宽
+2. 最好能保持脚跟不着地
+3. 步幅拉开，保持低重心
+
+### Ball Machine Drill
+
+可以使用shadow swing，不用打每一个球
+
+1. 直线 单项技术
+2. 直线 切换正反手
+3. 斜线 单项技术
+4. 斜线 跑动+单项技术
+5. 背面 听到声音转头
+6. 中场球+中/高 高度
+7. 底线球 防守型撤步球
+8. 回球 高+低 组合
+9. 同一个技术 切换两侧角落
+10. 两种技术交替 一轻一重（例如）
+
+- 打进发球线&底线之间，连续N个
+- 短球 机会球
+
+[待添加](https://www.youtube.com/watch?v=CofM-vwQRW4)
+
+### Tennis Single Strategy
+
+Less Mistakes
+
+- START
 
